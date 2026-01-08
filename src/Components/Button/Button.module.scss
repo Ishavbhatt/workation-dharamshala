@@ -1,0 +1,109 @@
+@use "../../styles/settings/_settings" as *;
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 36px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+    white-space: nowrap;
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.primary {
+    background: $primary;
+    color: #ffffff;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg,
+                rgba(255, 255, 255, 0.25),
+                rgba(255, 255, 255, 0.05),
+                rgba(255, 255, 255, 0.25));
+        transform: translateX(-120%);
+        transition: transform 0.6s ease;
+    }
+
+    &:hover::before {
+        transform: translateX(120%);
+    }
+
+    &:hover {
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.secondary {
+    background: transparent;
+    color: $primary;
+    border: 1.5px solid rgba(46, 79, 79, 0.6);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(46, 79, 79, 0.1);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+        z-index: 1;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        border-color: rgba(46, 79, 79, 0.9);
+    }
+}
+
+.ternary {
+    background: $white;
+    color: $primary;
+    border: 1.5px solid $white;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(46, 79, 79, 0.1);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+        z-index: 1;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        border-color: $white;
+    }
+}

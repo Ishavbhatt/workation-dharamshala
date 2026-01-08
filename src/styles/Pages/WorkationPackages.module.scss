@@ -1,0 +1,141 @@
+@use "../settings/_settings" as *;
+
+/* Header */
+.header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    color: #111;
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: #555;
+  }
+}
+
+/* Grid */
+.packagesGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+
+  .packageCard {
+    background: #fbf7e8;
+    /* warm cream */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 28px;
+    padding: 48px 42px;
+    display: flex;
+    flex-direction: column;
+
+    .highlight {
+      background: #f6f1dc;
+      transform: translateY(-20px);
+    }
+
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+  font-family: "Marcellus", serif;
+        font-size: 2.2rem;
+        font-weight: 400;
+      }
+
+      .badge,
+      .badgePrimary {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.06);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .badgePrimary {
+        background: rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .description {
+      margin: 22px 0 28px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .priceSection {
+      margin-bottom: 32px;
+
+      .price {
+        font-family: "Marcellus", serif;
+        font-size: 30px;
+        font-weight: 400;
+      }
+
+      .note {
+        margin-left: 6px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.95rem;
+        color: #333;
+
+        &::before {
+          content: "✔";
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: #1f1b16;
+          color: #fff;
+          font-size: 0.7rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .packagesGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .highlight {
+    transform: none;
+  }
+
+  .price {
+    font-size: 2.6rem;
+  }
+}

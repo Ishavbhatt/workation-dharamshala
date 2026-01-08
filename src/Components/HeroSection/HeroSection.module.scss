@@ -1,0 +1,80 @@
+@use "../../styles/settings/_settings" as *;
+
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+    overflow: hidden;
+    border-radius: 28px;
+    max-width: 1280px;
+    margin: 30px auto 0 auto;
+}
+
+.imageWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.heroImage {
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.25));
+}
+
+/* Content */
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    color: #ffffff;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 16px;
+}
+
+.heroContent h1 {
+    font-family: "Marcellus", serif;
+    font-size: 54px;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.heroContent p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 75vh;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+
+    .heroContent h1 {
+        font-size: 2.6rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+    }
+}
