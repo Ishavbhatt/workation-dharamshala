@@ -12,8 +12,6 @@
 }
 
 .contact_info {
-    padding: 80px 20px 100px;
-
     .grid {
         max-width: 1280px;
         margin: 0 auto;
@@ -35,7 +33,7 @@
             }
 
             h3 {
-        font-family: "Marcellus", serif;
+                font-family: "Marcellus", serif;
                 font-size: 1.6rem;
                 font-weight: 400;
                 color: #2b2622;
@@ -51,25 +49,86 @@
     }
 }
 
+.contact_main {
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 48px;
+
+        .imageWrapper {
+            position: relative;
+            height: 620px;
+            border-radius: 12px;
+            overflow: hidden;
+
+            .image {
+                object-fit: cover;
+            }
+        }
+
+        .formWrapper {
+            background: #fdf8e9;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            padding: 48px;
+
+            h2 {
+                font-family: "Marcellus", serif;
+                font-size: 2.4rem;
+                font-weight: 400;
+                color: #2b2622;
+                margin-bottom: 32px;
+            }
+
+        }
+    }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact_main {
+        .container {
+            grid-template-columns: 1fr;
+
+            .imageWrapper {
+                height: 420px;
+            }
+        }
     }
 }
 
 @media (max-width: 600px) {
     .contact_info {
         padding: 60px 16px 80px;
-    }
 
-    .grid {
-        grid-template-columns: 1fr;
+        .grid {
+            grid-template-columns: 1fr;
 
-        .icon {
-            margin-bottom: 28px;
+            .icon {
+                margin-bottom: 28px;
+            }
         }
     }
 
+    .contact_main {
+        padding: 70px 16px;
 
+        .formWrapper {
+            padding: 32px;
+
+            .row {
+                grid-template-columns: 1fr;
+            }
+
+            .formWrapper h2 {
+                font-size: 2rem;
+            }
+        }
+    }
 }

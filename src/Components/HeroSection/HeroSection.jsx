@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.imageWrapper}>
         <Image
-          src="/images/home-banner.JPG"
+          src="/images/workation-dharamshala.JPG"
           alt="Workation Dharamshala – Remote work stays in the Himalayas"
           fill
           priority
@@ -30,7 +30,8 @@ export default function HeroSection() {
         </p>
 
         <Button
-          href="https://wa.me/91XXXXXXXXXX"
+          href="https://wa.me/+918219703715"
+          target={"_blank"}
           variant="ternary"
         >
           Check Availability

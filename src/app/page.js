@@ -10,6 +10,31 @@ import {
 } from 'react-icons/lu'
 import Image from "next/image";
 
+export const metadata = {
+  title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
+  description:
+    "Looking for a workation in Dharamshala? Stay in work-friendly mountain accommodations with fast WiFi, power backup, and peaceful surroundings. Book your remote work stay today.",
+  alternates: {
+    canonical: "https://workationdharamshala.in/",
+  },
+  openGraph: {
+    title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
+    description:
+      "Looking for a workation in Dharamshala? Stay in work-friendly mountain accommodations with fast WiFi, power backup, and peaceful surroundings. Book your remote work stay today.",
+    url: "https://dharamshalaretreat.com/",
+    images: [
+      {
+        url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function Home() {
 
   const whyItems = [
@@ -100,8 +125,8 @@ export default function Home() {
             {/* Image Side */}
             <div className={styles.audienceImage}>
               <Image
-                src="/images/home-banner.JPG"
-                alt="Remote work lifestyle in Dharamshala"
+                src="/images/working-remotely.avif"
+                alt="Professional working remotely with a laptop in mountains and nature landscape"
                 fill
                 priority={false}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -134,7 +159,7 @@ export default function Home() {
             {/* Background Image */}
             <div className={styles.ctaBg}>
               <Image
-                src="/images/home-banner.JPG"
+                src="/images/mountain-view.webp"
                 alt="Work from the Himalayas"
                 fill
                 sizes="(max-width: 768px) 100vw, 1200px"
@@ -153,7 +178,7 @@ export default function Home() {
 
               <div className={styles.ctaActions}>
                 <a
-                  href="https://wa.me/91XXXXXXXXXX"
+                  href="https://wa.me/+918219703715"
                   className={styles.primaryBtn}
                 >
                   Check Availability on WhatsApp

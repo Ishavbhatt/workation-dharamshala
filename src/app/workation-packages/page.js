@@ -1,6 +1,31 @@
 import Button from '@/Components/Button/Button';
 import styles from '../../styles/Pages/WorkationPackages.module.scss';
 
+export const metadata = {
+  title: "Workation Packages in Dharamshala | 7 & 14 Day Remote Work Stays",
+  description:
+    "Explore workation packages in Dharamshala including 7-day and 14-day remote work stays. High-speed WiFi, power backup, and peaceful mountain views included.",
+  alternates: {
+    canonical: "https://workationdharamshala.in/workation-packages",
+  },
+  openGraph: {
+    title: "Workation Packages in Dharamshala | 7 & 14 Day Remote Work Stays",
+    description:
+      "Explore workation packages in Dharamshala including 7-day and 14-day remote work stays. High-speed WiFi, power backup, and peaceful mountain views included.",
+    url: "https://dharamshalaretreat.com/",
+    images: [
+      {
+        url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function WorkationPackages() {
   return (
     <main className={styles.pageWrapper}>
@@ -43,7 +68,7 @@ export default function WorkationPackages() {
           </div>
 
           <Button
-            href="https://wa.me/91XXXXXXXXXX"
+            href="https://wa.me/+918219703715"
             variant="primary"
           >
             Check Availability
@@ -78,7 +103,7 @@ export default function WorkationPackages() {
           </div>
 
           <Button
-            href="https://wa.me/91XXXXXXXXXX"
+            href="https://wa.me/+918219703715"
             variant="primary"
           >
             Check Availability

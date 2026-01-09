@@ -1,15 +1,42 @@
 import PageBanner from '@/Components/Banners/PageBanner';
 import styles from '../../styles/Pages/Contact.module.scss';
+import Image from 'next/image';
+import ContactForm from '@/Components/Forms/ContactForm';
+
+export const metadata = {
+  title: "Contact Workation Dharamshala | Book Your Workation Stay",
+  description:
+    "Get in touch with Workation Dharamshala to check availability, pricing, and bookings for work-from-mountains stays in Dharamshala. WhatsApp us today.",
+  alternates: {
+    canonical: "https://workationdharamshala.in/workation-packages",
+  },
+  openGraph: {
+    title: "Contact Workation Dharamshala | Book Your Workation Stay",
+    description:
+      "Get in touch with Workation Dharamshala to check availability, pricing, and bookings for work-from-mountains stays in Dharamshala. WhatsApp us today.",
+    url: "https://dharamshalaretreat.com/",
+    images: [
+      {
+        url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function ContactUs() {
   return (
     <>
       <PageBanner
         title="Contact Us"
-        description={'5-day Art Retreats Dharamshala, Himachal Pradesh'}
+      // description={'5-day Art Retreats Dharamshala, Himachal Pradesh'}
       />
 
-      <section className={styles.contact_info}>
+      <section className={`${styles.contact_info} common_margin`}>
         <div className={styles.grid}>
           <div className={styles.card}>
             <div className={styles.icon}>
@@ -23,25 +50,41 @@ export default function ContactUs() {
               📞
             </div>
             <h3>Our Phone</h3>
-            <p>+91 XXXXX XXXXX</p>
+            <p>+91 8219703715</p>
           </div>
           <div className={styles.card}>
             <div className={styles.icon}>
               ✉️
             </div>
             <h3>Our Email</h3>
-            <p>hello@workationdharamshala.in</p>
+            <p>ishavbhattkhaniyara@gmail.com</p>
           </div>
           <div className={styles.card}>
             <div className={styles.icon}>
               ⏰
             </div>
             <h3>Opening Hours</h3>
-            <p>Mon – Fri, 9 AM to 6 PM</p>
+            <p>Mon – Sun, 9 AM to 6 PM</p>
           </div>
         </div>
       </section>
 
+      <section className={`${styles.contact_main} common_margin`}>
+        <div className={styles.container}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src="/images/mountain-stay.webp"
+              alt="Get in touch with Workation Dharamshala"
+              fill
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.formWrapper}>
+            <h2>Let's Get In Touch</h2>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
 
       <div className={styles.map_wrapper}>
         <iframe

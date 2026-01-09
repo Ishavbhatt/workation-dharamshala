@@ -5,6 +5,7 @@ export default function Button({
     children,
     variant = 'primary',
     href,
+    target,
     onClick,
     className,
 }) {
@@ -14,12 +15,9 @@ export default function Button({
         className
     )
 
-    console.log(children, 'children');
-    
-
     if (href) {
         return (
-            <a href={href} className={buttonClass}>
+            <a href={href} className={buttonClass} target={target ? target : ''}>
                 <span>{children}</span>
             </a>
         )

@@ -1,5 +1,31 @@
 import styles from '../../styles/Pages/Home.module.scss';
 
+export const metadata = {
+  title: "About Workation Dharamshala | Remote Work Stays in the Himalayas",
+  description:
+    "Workation Dharamshala helps remote workers and IT professionals experience work from the Himalayas with reliable WiFi, power backup, and long-stay comfort.",
+  alternates: {
+    canonical: "https://workationdharamshala.in/about",
+  },
+  openGraph: {
+    title: "About Workation Dharamshala | Remote Work Stays in the Himalayas",
+    description:
+      "Workation Dharamshala helps remote workers and IT professionals experience work from the Himalayas with reliable WiFi, power backup, and long-stay comfort.",
+    url: "https://dharamshalaretreat.com/",
+    images: [
+      {
+        url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+
 export default function About() {
   return (
     <main className={styles.pageWrapper}>
