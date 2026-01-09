@@ -17,6 +17,9 @@ export const metadata = {
   alternates: {
     canonical: "https://workationdharamshala.in/",
   },
+  verification: {
+    google: "TfbGSCuflrVQVaP56dZjPKBqKgvv6ERvsJkoFogjgp8",
+  },
   openGraph: {
     title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
     description:
