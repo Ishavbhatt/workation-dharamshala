@@ -14,7 +14,7 @@ export const metadata = {
     title: "Contact Workation Dharamshala | Book Your Workation Stay",
     description:
       "Get in touch with Workation Dharamshala to check availability, pricing, and bookings for work-from-mountains stays in Dharamshala. WhatsApp us today.",
-    url: "https://dharamshalaretreat.com/",
+    url: "https://workationdharamshala.in/",
     images: [
       {
         url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",
@@ -37,34 +37,36 @@ export default function ContactUs() {
       />
 
       <section className={`${styles.contact_info} common_margin`}>
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <div className={styles.icon}>
-              📍
+        <div className='container'>
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                📍
+              </div>
+              <h3>Our Address</h3>
+              <p>Dharamshala, Himachal Pradesh</p>
             </div>
-            <h3>Our Address</h3>
-            <p>Dharamshala, Himachal Pradesh</p>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.icon}>
-              📞
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                📞
+              </div>
+              <h3>Our Phone</h3>
+              <p>+91 8219703715</p>
             </div>
-            <h3>Our Phone</h3>
-            <p>+91 8219703715</p>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.icon}>
-              ✉️
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                ✉️
+              </div>
+              <h3>Our Email</h3>
+              <p>ishavbhattkhaniyara@gmail.com</p>
             </div>
-            <h3>Our Email</h3>
-            <p>ishavbhattkhaniyara@gmail.com</p>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.icon}>
-              ⏰
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                ⏰
+              </div>
+              <h3>Opening Hours</h3>
+              <p>Mon – Sun, 9 AM to 6 PM</p>
             </div>
-            <h3>Opening Hours</h3>
-            <p>Mon – Sun, 9 AM to 6 PM</p>
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ export const metadata = {
     title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
     description:
       "Looking for a workation in Dharamshala? Stay in work-friendly mountain accommodations with fast WiFi, power backup, and peaceful surroundings. Book your remote work stay today.",
-    url: "https://dharamshalaretreat.com/",
+    url: "https://workationdharamshala.in/ https://workationdharamshala.in",
     images: [
       {
         url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",

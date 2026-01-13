@@ -81,7 +81,6 @@
                 color: #2b2622;
                 margin-bottom: 32px;
             }
-
         }
     }
 }
@@ -105,29 +104,41 @@
 
 @media (max-width: 600px) {
     .contact_info {
-        padding: 60px 16px 80px;
-
         .grid {
             grid-template-columns: 1fr;
+            gap: 18px;
 
-            .icon {
-                margin-bottom: 28px;
+            .card {
+                padding: 20px;
+
+                .icon {
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
             }
         }
     }
 
     .contact_main {
-        padding: 70px 16px;
+        .container {
+            padding: 0 10px;
+            gap: 30px;
 
-        .formWrapper {
-            padding: 32px;
+            .formWrapper {
+                padding: 20px;
 
-            .row {
-                grid-template-columns: 1fr;
-            }
-
-            .formWrapper h2 {
-                font-size: 2rem;
+                h2 {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
             }
         }
     }

@@ -40,4 +40,13 @@
     .field textarea {
         resize: none;
     }
+
+    @media (max-width: 768px) {
+        gap: 16px;
+
+        .row {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
 }

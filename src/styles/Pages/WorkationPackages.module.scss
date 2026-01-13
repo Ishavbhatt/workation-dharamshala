@@ -4,7 +4,7 @@
 .header {
   max-width: 900px;
   margin: 0 auto;
-  padding: 80px 20px 40px;
+  padding: 80px 0 40px 0;
   text-align: center;
 
   h1 {
@@ -23,7 +23,7 @@
 .packagesGrid {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -48,7 +48,7 @@
       align-items: center;
 
       h2 {
-  font-family: "Marcellus", serif;
+        font-family: "Marcellus", serif;
         font-size: 2.2rem;
         font-weight: 400;
       }
@@ -129,13 +129,77 @@
   .packagesGrid {
     grid-template-columns: 1fr;
     gap: 32px;
+
+    .packageCard {
+      border-radius: 20px;
+      padding: 20px 16px;
+
+      .highlight {
+        transform: none;
+      }
+
+      .cardHeader {
+        h2 {
+          font-size: 22px;
+        }
+
+        .badge,
+        .badgePrimary {
+          font-size: 10px;
+          padding: 5px;
+        }
+      }
+
+      .description {
+        margin: 18px 0 20px;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      .priceSection {
+        margin-bottom: 15px;
+
+        .price {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .note {
+          font-size: 12px;
+        }
+      }
+
+      .features {
+        margin: 0 0 40px;
+        gap: 10px;
+
+        li {
+          gap: 8px;
+          font-size: 15px;
+
+          &::before {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
   }
 
-  .highlight {
-    transform: none;
-  }
+  .header {
+    max-width: 100%;
+    padding: 60px 0 0 0;
+    text-align: center;
 
-  .price {
-    font-size: 2.6rem;
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+    }
   }
 }

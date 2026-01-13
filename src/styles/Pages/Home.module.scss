@@ -315,9 +315,6 @@
     }
 }
 
-
-
-
 /* Mobile */
 @media (max-width: 768px) {
     .aboutSection {
@@ -326,5 +323,29 @@
 
     .aboutHeader h1 {
         font-size: 1.8rem;
+    }
+
+
+    .why {
+        .whyGrid {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+
+    .audience {
+        .audienceWrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-height: 480px;
+
+            .audienceImage {
+                height: 300px;
+            }
+
+            .audienceContent {
+                padding: 20px 0;
+            }
+        }
     }
 }

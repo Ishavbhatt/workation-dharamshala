@@ -18,6 +18,9 @@ export const metadata = {
   title: "Workation Dharamshala | Remote Work Stays in the Himalayas",
   description:
     "Workation Dharamshala offers premium remote work stays with fast WiFi, power backup, and peaceful mountain views.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {

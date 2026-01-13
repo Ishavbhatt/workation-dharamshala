@@ -63,7 +63,7 @@ export default function Header() {
           <a href="/" onClick={() => setOpen(false)}>Home</a>
           <a href="/workation-packages" onClick={() => setOpen(false)}>Workation</a>
           <a href="/about" onClick={() => setOpen(false)}>About</a>
-          <a href="/contact" onClick={() => setOpen(false)}>Contact</a>
+          <a href="/contact-us" onClick={() => setOpen(false)}>Contact</a>
         </nav>
 
         <Button
