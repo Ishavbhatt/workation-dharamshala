@@ -27,7 +27,7 @@ export const metadata = {
     url: "https://workationdharamshala.in/ https://workationdharamshala.in",
     images: [
       {
-        url: "https://workationdharamshala.in/images/workation-dharamshala.JPG",
+        url: "https://workationdharamshala.in/images/workation-dharamshala.webp",
         width: 1200,
         height: 630,
       },

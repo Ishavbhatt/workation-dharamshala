@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.imageWrapper}>
         <Image
-          src="/images/workation-dharamshala.JPG"
+          src="/images/workation-dharamshala.webp"
           alt="Workation Dharamshala – Remote work stays in the Himalayas"
           fill
           priority
