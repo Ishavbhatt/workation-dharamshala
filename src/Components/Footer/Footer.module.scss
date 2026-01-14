@@ -25,18 +25,30 @@ $footer-divider: rgba(255, 255, 255, 0.12);
   gap: 4rem;
 }
 
-/* Brand */
-.brand h3 {
-  // font-family: "Marcellus", serif;
-  font-size: 2rem;
-  color: $footer-heading;
-  margin-bottom: 1.2rem;
-}
+.brand {
+  h3 {
+    // font-family: "Marcellus", serif;
+    font-size: 2rem;
+    color: $footer-heading;
+    margin-bottom: 1.2rem;
+  }
 
-.brand p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  max-width: 420px;
+  a {
+    width: 220px;
+    height: 66px;
+    display: block;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-top: 20px;
+  }
 }
 
 /* Section titles */

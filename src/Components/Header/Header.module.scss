@@ -12,20 +12,26 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1.2rem 0;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-family: "Marcellus", serif;
-  font-size: 1.5rem;
-  color: $primary;
+  a {
+    width: 220px;
+    height: 66px;
+    display: block;
 
-  span {
-    font-weight: 600;
+    img {
+      object-fit: contain;
+    }
   }
+}
+
+.whatsapp_btn {
+  display: block;
 }
 
 /* Desktop Nav */
@@ -79,7 +85,7 @@
   z-index: 200;
   transform: translateX(100%);
   transition: transform 0.4s ease;
-  padding: 2rem;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
 }
@@ -102,7 +108,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin: 14px 0;
 
   a {
     font-size: 1.1rem;
@@ -125,15 +131,30 @@
 
 /* Responsive Rules */
 @media (max-width: 768px) {
-.container {
-  padding: 0  10px;
-}
+  .container {
+    padding: 0 10px;
+  }
+
   .desktopNav,
-  .cta {
+  .cta,
+  .whatsapp_btn {
     display: none;
   }
 
   .menuBtn {
     display: block;
+  }
+
+  .logo {
+    a {
+      width: 180px;
+      height: 60px;
+      display: block;
+      img {
+        object-fit: contain;
+        width: 180px;
+        height: 60px;
+      }
+    }
   }
 }

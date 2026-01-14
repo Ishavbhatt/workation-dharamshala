@@ -1,8 +1,9 @@
 'use client'
-
 import { useState } from 'react'
 import styles from './Header.module.scss'
 import Button from '../Button/Button'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -12,7 +13,9 @@ export default function Header() {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.logo}>
-            Workation <span>Dharamshala</span>
+            <Link href='/' >
+              <Image src='/logo/logo-vertical.png' height={66} width={220} alt='Workation Dharamshala logo' />
+            </Link>
           </div>
 
           {/* Desktop Nav */}
@@ -23,6 +26,8 @@ export default function Header() {
             <a href="/contact-us">Contact</a>
           </nav>
 
+<div className={styles.whatsapp_btn}>
+
           <Button
             href="https://wa.me/+918219703715"
             variant="primary"
@@ -30,6 +35,7 @@ export default function Header() {
           >
             WhatsApp Us
           </Button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button

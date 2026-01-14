@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import styles from './Footer.module.scss'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -11,6 +13,13 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <h3>Workation Dharamshala</h3>
+
+            {/* <Image src='/logo/logo-vertical.png' height={100} width={200} alt='log' /> */}
+
+            <Link href='/' >
+              <Image src='/logo/logo-vertical.png' height={66} width={220} alt='Workation Dharamshala logo' />
+            </Link>
+
             <p>
               Curated long-stay workation experiences in the Himalayas for
               professionals who value focus, comfort, and calm.
@@ -48,12 +57,10 @@ export default function Footer() {
               Slow travel, mindful work, and Himalayan living.
             </p>
 
-            {/* <div className={styles.socialIcons}>
-              <a href="#" aria-label="Facebook">Fb</a>
-              <a href="#" aria-label="Twitter">Tw</a>
-              <a href="#" aria-label="Instagram">Ig</a>
-              <a href="#" aria-label="Website">Web</a>
-            </div> */}
+            <div className={styles.socialIcons}>
+              <a href="https://www.facebook.com/workationdharamshala" aria-label="Facebook">Fb</a>
+              <a href="https://www.instagram.com/workationdharamshala/" aria-label="Instagram">Ig</a>
+            </div>
           </div>
         </div>
 
