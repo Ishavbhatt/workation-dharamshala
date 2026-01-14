@@ -9,6 +9,7 @@ import {
   LuHeadphones,
 } from 'react-icons/lu'
 import Image from "next/image";
+import Button from "@/Components/Button/Button";
 
 export const metadata = {
   title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
@@ -180,12 +181,13 @@ export default function Home() {
               </p>
 
               <div className={styles.ctaActions}>
-                <a
+                <Button
                   href="https://wa.me/+918219703715"
-                  className={styles.primaryBtn}
+                  target={"_blank"}
+                  variant="ternary"
                 >
                   Check Availability on WhatsApp
-                </a>
+                </Button>
 
                 <span className={styles.helperText}>
                   Limited stays • Long-stay friendly • No commitment

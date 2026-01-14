@@ -23,7 +23,7 @@ export default function Footer() {
             <a href="/">Home</a>
             <a href="/workation-packages">Workation Packages</a>
             <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact-us">Contact</a>
           </div>
 
           {/* Address + Contact */}
@@ -35,7 +35,7 @@ export default function Footer() {
             </p>
 
             <span className={styles.contactTitle}>Our Contact</span>
-            <a href="https://wa.me/918219703715">+91 8219703715</a>
+            <a href="tel:+918219703715">+91 8219703715</a>
             <a href="mailto:ishavbhattkhaniyara@gmail.com">
               ishavbhattkhaniyara@gmail.com
             </a>

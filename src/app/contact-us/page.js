@@ -89,13 +89,9 @@ export default function ContactUs() {
       </section>
 
       <div className={styles.map_wrapper}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.98881639777!2d76.36683277589822!3d32.20453201302182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b537793813fd9%3A0x530ff4e5477468cc!2sDharamshala%20Retreat!5e0!3m2!1sen!2sin!4v1759852213223!5m2!1sen!2sin&maptype=satellite"
-
-          style={{ border: 0 }}
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27004.27448710275!2d76.298565690255!3d32.21677687975214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b50df65bd7311%3A0x3e08bdb100c6dc10!2sDharamshala%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1768397153316!5m2!1sen!2sin" style={{ border: 0 }}
           allowFullScreen
-          loading="lazy"
-        >
+          loading="lazy">
         </iframe>
       </div>
     </>

@@ -5,9 +5,10 @@ import Button from "../Button/Button";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     email: "",
-    subject: "",
+    phone: "",
     message: "",
   });
   const [status, setStatus] = useState("");
@@ -28,7 +29,7 @@ export default function ContactForm() {
       const result = await res.json();
       if (res.ok) {
         setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ firstname: "", lastname: "", email: "", phone: "", message: "" });
       } else {
         setStatus(result.error || "Failed to send message.");
       }
@@ -36,40 +37,69 @@ export default function ContactForm() {
       setStatus("Failed to send message.");
     }
   };
-
   return (
     <form className={styles.form}>
       <div className={styles.row}>
         <div className={styles.field}>
           <label>First Name</label>
-          <input type="text" placeholder="Your First Name" />
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Your First Name"
+            required
+            value={formData.firstname}
+            onChange={handleChange}
+          />
         </div>
 
         <div className={styles.field}>
           <label>Last Name</label>
-          <input type="text" placeholder="Your Last Name" />
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Your Last Name"
+            value={formData.lastname}
+            onChange={handleChange}
+          />
         </div>
       </div>
 
       <div className={styles.row}>
         <div className={styles.field}>
           <label>Email</label>
-          <input type="email" placeholder="Your Email" />
+          <input
+            type="text"
+            name="email"
+            required
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </div>
 
         <div className={styles.field}>
           <label>Phone Number</label>
-          <input type="tel" placeholder="Your Phone Number" />
+          <input
+            type="text"
+            name="phone"
+            required
+            placeholder="Your Phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
         </div>
       </div>
 
       <div className={styles.field}>
         <label>Message</label>
-        <textarea placeholder="Your Message" rows={4} />
+        <textarea placeholder="Your Message" name="message" value={formData.message} onChange={handleChange} rows={4} />
       </div>
+
+      {status && <p>{status}</p>}
 
       <Button
         variant="primary"
+        onClick={handleSubmit}
       >
         Send Message
       </Button>

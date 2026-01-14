@@ -71,8 +71,9 @@ export default function WorkationPackages() {
             <Button
               href="https://wa.me/+918219703715"
               variant="primary"
+              target={"_blank"}
             >
-              Check Availability
+              WhatsApp Us
             </Button>
           </article>
 
@@ -106,8 +107,9 @@ export default function WorkationPackages() {
             <Button
               href="https://wa.me/+918219703715"
               variant="primary"
+              target={"_blank"}
             >
-              Check Availability
+              WhatsApp Us
             </Button>
           </article>
         </section>

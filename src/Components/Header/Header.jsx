@@ -26,6 +26,7 @@ export default function Header() {
           <Button
             href="https://wa.me/+918219703715"
             variant="primary"
+            target={"_blank"}
           >
             WhatsApp Us
           </Button>
@@ -69,6 +70,7 @@ export default function Header() {
         <Button
           href="https://wa.me/+918219703715"
           variant="primary"
+          target={"_blank"}
         >
           WhatsApp Us
         </Button>
