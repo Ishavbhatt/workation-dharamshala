@@ -1,7 +1,7 @@
-import PageBanner from "@/components/Banners/PageBanner";
 import styles from "../../styles/Pages/Blogs.module.scss";
-import blogsData from '@/data/blogsData.json'
+import blogsData from '@/Data/blogsData.json'
 import BlogCard from "@/Components/Card/BlogCard";
+import PageBanner from "@/Components/Banners/PageBanner";
 
 export const metadata = {
     title: "Workation Blog | Travel Tips for Remote Workers & Digital Nomads",
@@ -24,7 +24,6 @@ export const metadata = {
         ],
     },
 };
-
 
 export default async function BlogsPage() {
 

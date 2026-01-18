@@ -10,7 +10,7 @@ import {
 } from 'react-icons/lu'
 import Image from "next/image";
 import Button from "@/Components/Button/Button";
-import blogsData from '@/data/blogsData.json'
+import blogsData from '@/Data/blogsData.json'
 import BlogCard from "@/Components/Card/BlogCard";
 
 export const metadata = {

@@ -1,5 +1,6 @@
 import styles from "../../../styles/Pages/Blogs.module.scss";
-import blogsData from '@/data/blogsData.json'
+import blogsData from '@/Data/blogsData.json'
+
 
 export default async function SingleBlog({ params }) {
     const { slug } = await params;
