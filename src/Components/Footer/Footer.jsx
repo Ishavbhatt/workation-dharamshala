@@ -1,8 +1,13 @@
+'use client';
 import Image from 'next/image'
 import styles from './Footer.module.scss'
 import Link from 'next/link'
+import { motion } from "framer-motion";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+const MotionLink = motion(Link);
 
 export default function Footer() {
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -17,7 +22,7 @@ export default function Footer() {
             {/* <Image src='/logo/logo-vertical.png' height={100} width={200} alt='log' /> */}
 
             <Link href='/' >
-              <Image src='/logo/logo-vertical.png' height={66} width={220} alt='Workation Dharamshala logo' />
+              <Image src='/logo/colored-logo.png' height={66} width={220} alt='Workation Dharamshala logo' />
             </Link>
 
             <p>
@@ -32,6 +37,7 @@ export default function Footer() {
             <a href="/">Home</a>
             <a href="/workation-packages">Workation Packages</a>
             <a href="/about">About</a>
+            <a href="/blogs">Blogs</a>
             <a href="/contact-us">Contact</a>
           </div>
 
@@ -53,17 +59,31 @@ export default function Footer() {
           {/* Social */}
           <div className={styles.social}>
             <span>Follow Us On</span>
-            <p>
-              Slow travel, mindful work, and Himalayan living.
-            </p>
+            <p>Slow travel, mindful work, and Himalayan living.</p>
 
             <div className={styles.socialIcons}>
-              <a href="https://www.facebook.com/workationdharamshala" aria-label="Facebook">Fb</a>
-              <a href="https://www.instagram.com/workationdharamshala/" aria-label="Instagram">Ig</a>
+              <MotionLink
+                href="https://www.facebook.com/workationdharamshala"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+              >
+                <FaFacebookF />
+              </MotionLink>
+
+              <MotionLink
+                href="https://www.instagram.com/workationdharamshala/"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, rotate: -5 }}
+              >
+                <FaInstagram />
+              </MotionLink>
             </div>
           </div>
         </div>
-
         {/* Divider */}
         <div className={styles.divider} />
 
@@ -72,7 +92,6 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Workation Dharamshala</p>
           <p>Designed for slow work & meaningful stays</p>
         </div>
-
       </div>
     </footer>
   )

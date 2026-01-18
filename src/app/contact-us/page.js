@@ -2,6 +2,13 @@ import PageBanner from '@/Components/Banners/PageBanner';
 import styles from '../../styles/Pages/Contact.module.scss';
 import Image from 'next/image';
 import ContactForm from '@/Components/Forms/ContactForm';
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
+import Link from 'next/link';
 
 export const metadata = {
   title: "Contact Workation Dharamshala | Book Your Workation Stay",
@@ -41,28 +48,32 @@ export default function ContactUs() {
           <div className={styles.grid}>
             <div className={styles.card}>
               <div className={styles.icon}>
-                📍
+                <FaMapMarkerAlt />
               </div>
               <h3>Our Address</h3>
               <p>Dharamshala, Himachal Pradesh</p>
             </div>
+
             <div className={styles.card}>
               <div className={styles.icon}>
-                📞
+                <FaPhoneAlt />
               </div>
               <h3>Our Phone</h3>
-              <p>+91 8219703715</p>
+              <p><Link href="tel:+918219703715">+91 8219703715</Link></p>
             </div>
+
             <div className={styles.card}>
               <div className={styles.icon}>
-                ✉️
+                <FaEnvelope />
               </div>
               <h3>Our Email</h3>
-              <p>ishavbhattkhaniyara@gmail.com</p>
+              <p><Link href="mailto:ishavbhattkhaniyara@gmail.com">ishavbhattkhaniyara@gmail.com</Link></p>
+
             </div>
+
             <div className={styles.card}>
               <div className={styles.icon}>
-                ⏰
+                <FaClock />
               </div>
               <h3>Opening Hours</h3>
               <p>Mon – Sun, 9 AM to 6 PM</p>

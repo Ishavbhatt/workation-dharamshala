@@ -23,18 +23,18 @@ export default function Header() {
             <a href="/">Home</a>
             <a href="/workation-packages">Workation</a>
             <a href="/about">About</a>
+            <a href="/blogs">Blogs</a>
             <a href="/contact-us">Contact</a>
           </nav>
 
-<div className={styles.whatsapp_btn}>
-
-          <Button
-            href="https://wa.me/+918219703715"
-            variant="primary"
-            target={"_blank"}
-          >
-            WhatsApp Us
-          </Button>
+          <div className={styles.whatsapp_btn}>
+            <Button
+              href="https://wa.me/+918219703715"
+              variant="primary"
+              target={"_blank"}
+            >
+              WhatsApp Us
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,6 +70,7 @@ export default function Header() {
           <a href="/" onClick={() => setOpen(false)}>Home</a>
           <a href="/workation-packages" onClick={() => setOpen(false)}>Workation</a>
           <a href="/about" onClick={() => setOpen(false)}>About</a>
+          <a href="/blogs" onClick={() => setOpen(false)}>Blogs</a>
           <a href="/contact-us" onClick={() => setOpen(false)}>Contact</a>
         </nav>
 

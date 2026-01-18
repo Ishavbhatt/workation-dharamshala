@@ -10,6 +10,8 @@ import {
 } from 'react-icons/lu'
 import Image from "next/image";
 import Button from "@/Components/Button/Button";
+import blogsData from '@/data/blogsData.json'
+import BlogCard from "@/Components/Card/BlogCard";
 
 export const metadata = {
   title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
@@ -157,6 +159,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={`${styles.blogs_sec} common_margin`}>
+        <div className="container">
+          <span>Travel & Workation Insights</span>
+          <h2>Workation Tips, Remote Work & Travel Guides</h2>
+
+          <div className={styles.blogs_lisitng}>
+            {blogsData?.map((blog) => (
+              <BlogCard
+                key={blog.id}
+                title={blog.title}
+                date={blog.date}
+                image={blog.featuredImage}
+                slug={blog.slug}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
       <section className={`${styles.ctaSection} common_margin`}>
         <div className="container">
           <div className={styles.ctaCard}>

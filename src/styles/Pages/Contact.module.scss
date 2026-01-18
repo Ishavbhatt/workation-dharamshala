@@ -25,11 +25,28 @@
             border-radius: 12px;
             padding: 40px 32px;
             text-align: left;
+            cursor: default;
+
+            /* Card animation */
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 14px 36px rgba(0, 0, 0, 0.1);
+            }
 
             .icon {
                 font-size: 2rem;
                 margin-bottom: 40px;
                 color: #3a332d;
+
+                /* Icon animation */
+                transition: transform 0.35s ease, color 0.35s ease;
+            }
+
+            &:hover .icon {
+                transform: scale(1.2) rotate(-3deg);
+                color: #6b4f3f;
             }
 
             h3 {
