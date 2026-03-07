@@ -12,6 +12,9 @@ import Image from "next/image";
 import Button from "@/Components/Button/Button";
 import blogsData from '@/Data/blogsData.json'
 import BlogCard from "@/Components/Card/BlogCard";
+import LocalBusinessSchema from "@/Components/Schema/LocalBusinessSchema";
+import FaqSection from "@/Components/FaqSection/FaqSection";
+import Script from "next/script";
 
 export const metadata = {
   title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
@@ -27,7 +30,7 @@ export const metadata = {
     title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
     description:
       "Looking for a workation in Dharamshala? Stay in work-friendly mountain accommodations with fast WiFi, power backup, and peaceful surroundings. Book your remote work stay today.",
-    url: "https://workationdharamshala.in/ https://workationdharamshala.in",
+    url: "https://workationdharamshala.in",
     images: [
       {
         url: "https://workationdharamshala.in/images/workation-dharamshala.webp",
@@ -39,6 +42,15 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  keywords: [
+    "workation dharamshala",
+    "work from dharamshala",
+    "work from mountains india",
+    "digital nomad dharamshala",
+    "long stay dharamshala",
+    "remote work himalayas",
+    "workation in himachal pradesh"
+  ],
 };
 
 export default function Home() {
@@ -84,8 +96,55 @@ export default function Home() {
     'Professionals seeking focused work',
   ]
 
+  const faqsData = [
+    {
+      "question": "Is WiFi reliable for remote work in Dharamshala?",
+      "answer": "Yes. All our workation stays provide high-speed WiFi suitable for video calls, meetings, and daily remote work."
+    },
+    {
+      "question": "Are there other remote workers staying at the property?",
+      "answer": "Many guests staying with us are remote workers, freelancers, and digital nomads. It’s a great place to meet like-minded professionals."
+    },
+    {
+      "question": "What is included in the workation package?",
+      "answer": "Our packages typically include accommodation, 3 meals a day, high-speed WiFi, workspace access, housekeeping, and laundry facilities."
+    },
+    {
+      "question": "Can I stay for 2 weeks or longer?",
+      "answer": "Yes. We offer flexible workation stays including 7-day, 14-day, and 1-month long-stay packages."
+    },
+    {
+      "question": "Is Dharamshala a good place for remote work?",
+      "answer": "Dharamshala is one of the best destinations for remote work in India thanks to peaceful surroundings, mountain views, cafes, and reliable internet."
+    },
+    {
+      "question": "How do I book a workation stay?",
+      "answer": "You can check availability directly through WhatsApp on our website or send us your preferred dates and duration."
+    }
+  ]
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqsData.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
+
   return (
     <div>
+      <LocalBusinessSchema />
+
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <HeroSection />
 
       <section className={`${styles.editorial} common_margin`}>
@@ -132,7 +191,7 @@ export default function Home() {
             <div className={styles.audienceImage}>
               <Image
                 src="/images/working-remotely.avif"
-                alt="Professional working remotely with a laptop in mountains and nature landscape"
+                alt="Remote worker enjoying a workation in Dharamshala with Himalayan mountain view"
                 fill
                 priority={false}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -177,6 +236,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FaqSection faqs={faqsData} />
+
       <section className={`${styles.ctaSection} common_margin`}>
         <div className="container">
           <div className={styles.ctaCard}>
@@ -217,6 +279,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

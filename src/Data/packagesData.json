@@ -1,0 +1,52 @@
+[
+    {
+        "title": "7-Day Workation",
+        "badge": "Popular",
+        "badgeType": "secondary",
+        "description": "Ideal for professionals who want to experience remote work from the Himalayas without a long commitment.",
+        "features": [
+            "Private work-friendly room",
+            "High-speed WiFi",
+            "Power backup",
+            "Dedicated workspace",
+            "Weekly housekeeping",
+            "Peaceful mountain surroundings",
+            "Local area orientation on arrival"
+        ],
+        "price": "₹8,500 – ₹13,500"
+    },
+    {
+        "title": "14-Day Workation",
+        "badge": "Best Value",
+        "badgeType": "primary",
+        "description": "Designed for deep work, slow living, and professionals planning extended remote stays.",
+        "features": [
+            "Private long-stay room",
+            "High-speed WiFi",
+            "Reliable power backup",
+            "Work desk & chair",
+            "Laundry support",
+            "Long-stay discounted pricing",
+            "Local area assistance"
+        ],
+        "price": "₹17,000 – ₹27,000",
+        "highlight": true
+    },
+    {
+        "title": "1-Month Workation",
+        "badge": "Best for Digital Nomads",
+        "badgeType": "primary",
+        "description": "Perfect for professionals planning extended remote work stays in Dharamshala with complete work-life balance.",
+        "features": [
+            "Private long-stay room",
+            "High-speed WiFi",
+            "Reliable power backup",
+            "Work desk & chair",
+            "Laundry support",
+            "Long-stay discounted pricing",
+            "Local area assistance"
+        ],
+        "price": "₹34,000 – ₹54,000",
+        "highlight": true
+    }
+]

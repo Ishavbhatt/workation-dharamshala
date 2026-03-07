@@ -36,15 +36,13 @@ export default async function BlogsPage() {
                     <div className={styles.blogListing}>
                         {blogsData?.length > 0 &&
                             blogsData.map((blog, index) => (
-                                <div className={styles.blogListingCard} key={index}>
-                                    <BlogCard
-                                        key={blog.id}
-                                        title={blog.title}
-                                        date={blog.date}
-                                        image={blog.featuredImage}
-                                        slug={blog.slug}
-                                    />
-                                </div>
+                                <BlogCard
+                                    key={blog.id}
+                                    title={blog.title}
+                                    date={blog.date}
+                                    image={blog.featuredImage}
+                                    slug={blog.slug}
+                                />
                             ))}
                     </div>
                 </div>

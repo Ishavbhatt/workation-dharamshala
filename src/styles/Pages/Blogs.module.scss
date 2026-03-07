@@ -1,27 +1,32 @@
 @use "../settings/_settings" as *;
 
-// .blogListingSec {
-//   .blogListing {
-//     display: flex;
-//     // justify-content: space-between;
-//     gap: 30px;
-//     flex-wrap: wrap;
+.blogListingSec {
+  .blogListing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  // .blogListing {
+  //   display: flex;
+  //   // justify-content: space-between;
+  //   gap: 30px;
+  //   flex-wrap: wrap;
 
-//     .blogListingCard {
-//       width: calc(33% - 20px);
-//     }
-//   }
+  //   // .blogListingCard {
+  //   //   width: calc(50% - 20px);
+  //   // }
+  // }
 
-//   @media (max-width: 768px) {
-//     .blogListing {
-//       flex-wrap: wrap;
-//       .blogListingCard {
-//         width: 100%;
-//       }
-//     }
+  // @media (max-width: 768px) {
+  //   .blogListing {
+  //     flex-wrap: wrap;
+  //     .blogListingCard {
+  //       width: 100%;
+  //     }
+  //   }
 
-//   }
-// }
+  // }
+}
 
 .single_blog {
   display: flex;
