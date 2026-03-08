@@ -79,26 +79,26 @@ export default function WorkationPackages() {
 
           {/* Page Header */}
           <section className={styles.header}>
-  <h1>Workation in Dharamshala – Remote Work Stays in the Himalayas</h1>
+            <h1>Workation in Dharamshala – Remote Work Stays in the Himalayas</h1>
 
-  <p>
-    Looking for a peaceful place to work remotely from the mountains?
-    Our curated workation stays in Dharamshala are designed for
-    freelancers, developers and remote professionals who want reliable
-    WiFi, dedicated workspaces and calm Himalayan surroundings.
-  </p>
+            <p>
+              Looking for a peaceful place to work remotely from the mountains?
+              Our curated workation stays in Dharamshala are designed for
+              freelancers, developers and remote professionals who want reliable
+              WiFi, dedicated workspaces and calm Himalayan surroundings.
+            </p>
 
-  <p>
-    Choose from flexible 7-day, 14-day or 1-month workation packages
-    with high-speed internet, comfortable private rooms and long-stay
-    friendly pricing.
-  </p>
+            <p>
+              Choose from flexible 7-day, 14-day or 1-month workation packages
+              with high-speed internet, comfortable private rooms and long-stay
+              friendly pricing.
+            </p>
 
-  <p className={styles.headerNote}>
-    Explore our curated <Link href="/">workation stays in Dharamshala</Link>
-    designed for remote professionals.
-  </p>
-</section>
+            <p className={styles.headerNote}>
+              Explore our curated <Link href="/">workation stays in Dharamshala</Link>
+              designed for remote professionals.
+            </p>
+          </section>
 
           <section className={styles.quickCheck}>
             <h2>Planning a Workation in Dharamshala?</h2>
@@ -205,6 +205,47 @@ export default function WorkationPackages() {
               in Dharamshala.
             </p>
           </section>
+
+          <section className={styles.howItWorks}>
+  <h2>How to Book Your Workation</h2>
+
+  <div className={styles.steps}>
+    <div className={styles.step}>
+      <span className={styles.stepNumber}>1</span>
+      <h3>Share Your Dates</h3>
+      <p>
+        Tell us your preferred workation dates and duration.
+        We’ll check availability for the best stays.
+      </p>
+    </div>
+
+    <div className={styles.step}>
+      <span className={styles.stepNumber}>2</span>
+      <h3>Choose Your Stay</h3>
+      <p>
+        We suggest suitable rooms based on your budget,
+        workspace needs and stay duration.
+      </p>
+    </div>
+
+    <div className={styles.step}>
+      <span className={styles.stepNumber}>3</span>
+      <h3>Confirm Your Booking</h3>
+      <p>
+        Secure your stay and start planning your peaceful
+        workation in the Himalayas.
+      </p>
+    </div>
+  </div>
+
+  <Button
+    href="https://wa.me/+918219703715"
+    variant="primary"
+    target="_blank"
+  >
+    Ask About Available Dates
+  </Button>
+</section>
 
           <FaqSection faqs={faqsData} />
         </div>
