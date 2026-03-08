@@ -2,21 +2,58 @@
 
 /* Header */
 .header {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 0 40px 0;
+  max-width: 850px;
+  margin: 80px auto;
   text-align: center;
 
   h1 {
-    font-size: 2.4rem;
-    margin-bottom: 12px;
+    font-size: 2.3rem;
+    margin-bottom: 18px;
     color: #111;
+    line-height: 1.25;
   }
 
   p {
     font-size: 1.05rem;
     color: #555;
+    margin-bottom: 12px;
+    line-height: 1.65;
+  }
+
+  .headerNote {
+    font-size: 0.95rem;
+    color: #666;
+
+    a {
+      text-decoration: underline;
+      color: #000;
+    }
+  }
+}
+
+.quickCheck {
+  max-width: 800px;
+  margin: 30px auto 40px;
+  padding: 35px 28px;
+  text-align: center;
+  background: #f6f1dc;
+  border-radius: 18px;
+
+  h2 {
+    font-family: "Marcellus", serif;
+    font-size: 1.7rem;
     margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 22px;
+    line-height: 1.6;
+  }
+
+  button {
+    margin-top: 8px;
   }
 }
 
@@ -24,7 +61,7 @@
 .packagesGrid {
   // max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 0;
+  // padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -38,11 +75,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
-    .highlight {
-      background: #f6f1dc;
-      transform: translateY(-20px);
-    }
 
     .cardHeader {
       display: flex;
@@ -71,6 +103,12 @@
       .badgePrimary {
         background: rgba(0, 0, 0, 0.12);
       }
+    }
+
+    .availabilityNote {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 10px;
     }
 
     .description {
@@ -126,6 +164,92 @@
         }
       }
     }
+  }
+
+  .highlight {
+    background: #f6f1dc;
+    // transform: translateY(-20px);
+  }
+}
+
+.whyDharamshala {
+  max-width: 900px;
+  margin: 80px auto;
+  text-align: center;
+
+  h2 {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+    font-family: "Marcellus", serif;
+  }
+
+  p {
+    color: #555;
+    margin-bottom: 22px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    li {
+      background: #fbf7e8;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+  }
+}
+
+.included {
+  max-width: 900px;
+  margin: 80px auto;
+  text-align: center;
+
+  h2 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    font-family: "Marcellus", serif;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    li {
+      background: #f6f1dc;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+  }
+}
+
+.community {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+
+  h2 {
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+    font-family: "Marcellus", serif;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
   }
 }
 
@@ -195,7 +319,7 @@
 
   .header {
     max-width: 100%;
-    padding: 60px 0 0 0;
+    margin: 40px auto;
     text-align: center;
 
     h1 {
@@ -205,6 +329,45 @@
     p {
       font-size: 15px;
       color: #555;
+    }
+  }
+
+  .included {
+    margin: 40px auto;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      li {
+        padding: 10px;
+      }
+    }
+  }
+
+
+  .whyDharamshala {
+    margin: 40px auto;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  .community {
+    margin: 40px auto;
+
+    h2 {
+      font-size: 1.4rem;
     }
   }
 }
