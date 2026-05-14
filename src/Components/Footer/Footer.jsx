@@ -1,98 +1,161 @@
 'use client';
-import Image from 'next/image'
-import styles from './Footer.module.scss'
-import Link from 'next/link'
-import { motion } from "framer-motion";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
-const MotionLink = motion(Link);
+
+import Image from "next/image";
+import Link from "next/link";
+
+import styles from "./Footer.module.scss";
+
+import Button from "../Button/Button";
+import Icons from "../Icons/Icons";
 
 export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
 
-        {/* Top */}
-        <div className={styles.footerTop}>
+      <div className="container">
 
-          {/* Brand */}
-          <div className={styles.brand}>
-            <h3>Workation Dharamshala</h3>
+        {/* TOP */}
+        <div className={styles.footer_top}>
 
-            {/* <Image src='/logo/logo-vertical.png' height={100} width={200} alt='log' /> */}
+          {/* LEFT */}
+          <div className={styles.footer_cta}>
 
-            <Link href='/' >
-              <Image src='/logo/colored-logo.png' height={66} width={220} alt='Workation Dharamshala logo' />
-            </Link>
+            <h2 className={`font_heading fw_400 title_2 ${styles.footer_title}`}>
+              Ready to switch ? <br />
+              work from <span>home</span> himalayas
+            </h2>
 
-            <p>
-              Curated long-stay workation experiences in the Himalayas for
-              professionals who value focus, comfort, and calm.
-            </p>
+            <Button
+              variant="white"
+              icon={
+                <Icons
+                  name="arrowTopRight"
+                  size={20}
+                />
+              }
+              iconPosition="right"
+            >
+              Plan your escape
+            </Button>
+
+            <div className={styles.footer_middle}>
+              <p className={`font_body fw_400 body_1`}>
+                © 2026 • Workation Dharamshala
+              </p>
+
+              <Link
+                href="/policies"
+                className={`font_body fw_400 body_1`}
+              >
+                Policies
+              </Link>
+
+            </div>
+
           </div>
 
-          {/* Quick Links */}
-          <div className={styles.links}>
-            <span>Quick Links</span>
-            <a href="/">Home</a>
-            <a href="/workation-packages">Workation Packages</a>
-            <a href="/about">About</a>
-            <a href="/blogs">Blogs</a>
-            <a href="/contact-us">Contact</a>
+          {/* CENTER */}
+          <div className={styles.footer_links}>
+
+            <Link href="/">Dharamshala</Link>
+            <Link href="/">Experiences</Link>
+            <Link href="/">Guides</Link>
+            <Link href="/">Story</Link>
+            <Link href="/">Contact</Link>
+
           </div>
 
-          {/* Address + Contact */}
-          <div className={styles.contact}>
-            <span>Our Address</span>
-            <p>
-              Dharamshala <br />
-              Himachal Pradesh, India
-            </p>
+          {/* RIGHT */}
+          <div className={styles.footer_contact}>
+            <h4 className={`font_body fw_400 heading_4`}>
+              Connect
+            </h4>
 
-            <span className={styles.contactTitle}>Our Contact</span>
-            <a href="tel:+918219703715">+91 8219703715</a>
+            <a href="tel:+918219703715">
+              (+91) 82197-03715
+            </a>
+
             <a href="mailto:ishavbhattkhaniyara@gmail.com">
               ishavbhattkhaniyara@gmail.com
             </a>
-          </div>
 
-          {/* Social */}
-          <div className={styles.social}>
-            <span>Follow Us On</span>
-            <p>Slow travel, mindful work, and Himalayan living.</p>
-
-            <div className={styles.socialIcons}>
-              <MotionLink
-                href="https://www.facebook.com/workationdharamshala"
-                aria-label="Facebook"
+            <div className={styles.social_icons}>
+              <a
+                href="https://facebook.com"
                 target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
               >
-                <FaFacebookF />
-              </MotionLink>
+                <Icons
+                  name="facebook"
+                  size={26}
+                />
+              </a>
 
-              <MotionLink
-                href="https://www.instagram.com/workationdharamshala/"
-                aria-label="Instagram"
+              <a
+                href="https://instagram.com"
                 target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: -5 }}
               >
-                <FaInstagram />
-              </MotionLink>
+                <Icons
+                  name="instagram"
+                  size={26}
+                />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+              >
+                <Icons
+                  name="linkedin"
+                  size={26}
+                />
+              </a>
+
+              <a
+                href="https://reddit.com"
+                target="_blank"
+              >
+                <Icons
+                  name="reddit"
+                  size={26}
+                />
+              </a>
+
             </div>
-          </div>
-        </div>
-        {/* Divider */}
-        <div className={styles.divider} />
 
-        {/* Bottom */}
-        <div className={styles.footerBottom}>
-          <p>© {new Date().getFullYear()} Workation Dharamshala</p>
-          <p>Designed for slow work & meaningful stays</p>
+          </div>
+
         </div>
+
+        {/* COPYRIGHT */}
+
+
+        {/* DIVIDER */}
+        <div className={styles.divider}></div>
+
+        {/* BOTTOM */}
+        <div className={styles.footer_bottom}>
+
+          <Link href="/" className={styles.footer_logo}>
+
+            <Image
+              src="/logo/footer-logo.svg"
+              alt="Workation Dharamshala"
+              width={197}
+              height={40}
+            />
+
+          </Link>
+
+          <p className={`font_mono fw_400 body_2 ${styles.footer_text}`}>
+            CRAFTING LONG-STAY WORKATION EXPERIENCES IN THE HIMALAYAS
+            FOR PROFESSIONALS WHO VALUE FOCUS, COMFORT, AND CALM.
+          </p>
+
+        </div>
+
       </div>
+
     </footer>
-  )
+  );
 }

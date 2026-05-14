@@ -1,0 +1,136 @@
+@use "../../styles/settings/_settings" as *;
+
+.nearby_section {
+  padding: 68px 0;
+  border-bottom: 0.6px solid #151515;
+
+  .nearby_section_container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .nearby_heading {
+    margin-bottom: 40px;
+
+    .sub_heading_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+
+      .sub_heading {
+        color: #666666;
+      }
+
+      .line {
+        width: 58px;
+        height: 1px;
+        background: #cfc7b7;
+      }
+    }
+
+    .nearby_title {
+      max-width: 920px;
+      color: #151515;
+    }
+  }
+
+  .slider_wrapper {
+    position: relative;
+  }
+
+  .slider_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateY(-50%) scale(1.05);
+    }
+  }
+
+  .place_card {
+    position: relative;
+    min-height: 360px;
+    overflow: hidden;
+  }
+
+  .place_image {
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+
+  .image_overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.05));
+  }
+
+  .place_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 28px;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    padding: 0 20px;
+  }
+
+  .place_title {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    padding: 48px 0;
+
+
+    .nearby_section_container {
+      padding-left: 20px;
+    }
+
+    .nearby_heading {
+      margin-bottom: 30px;
+
+      .sub_heading_wrapper {
+        margin-bottom: 14px;
+
+        .line {
+          width: 40px;
+        }
+      }
+    }
+
+    .place_card {
+      min-height: 360px;
+    }
+
+    .slider_btn {
+      display: none;
+    }
+  }
+}

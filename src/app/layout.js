@@ -1,17 +1,60 @@
 import Header from "@/Components/Header/Header";
 import "../styles/globals.scss";
-import { Marcellus, Inter } from "next/font/google";
 import Footer from "@/Components/Footer/Footer";
+import localFont from "next/font/local";
+import { DM_Mono } from "next/font/google";
 
-export const marcellus = Marcellus({
-  subsets: ["latin"],
-  variable: "--font-marcellus",
-  weight: "400",
+const zodiak = localFont({
+  src: [
+    {
+      path: "../../public/fonts/zodiak/Zodiak-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/zodiak/Zodiak-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/zodiak/Zodiak-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-zodiak",
 });
 
-export const inter = Inter({
+const satoshi = localFont({
+  src: [
+    {
+      path: "../../public/fonts/satoshi/Fonts/OTF/Satoshi-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Fonts/OTF/Satoshi-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Fonts/OTF/Satoshi-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Fonts/OTF/Satoshi-Black.otf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-satoshi",
+});
+
+const dmMono = DM_Mono({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-mono",
+  weight: ["300", "400", "500"],
 });
 
 export const metadata = {
@@ -26,7 +69,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${marcellus.variable} ${inter.variable}`}>
+      <body className={`
+    ${zodiak.variable}
+    ${satoshi.variable}
+    ${dmMono.variable}
+  `}>
         <Header />
         {children}
         <Footer />

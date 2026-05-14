@@ -4,6 +4,7 @@ import styles from './Header.module.scss'
 import Button from '../Button/Button'
 import Image from 'next/image'
 import Link from 'next/link'
+import Icons from '../Icons/Icons'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -11,76 +12,165 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.container}>
-          <div className={styles.logo}>
-            <Link href='/' >
-              <Image src='/logo/logo-vertical.png' height={66} width={220} alt='Workation Dharamshala logo' />
-            </Link>
+        {/* TOP BAR */}
+        <div className={styles.top_bar}>
+          <div className="container">
+
+            <div className={styles.top_bar_grid}>
+
+              {/* LEFT */}
+              <p className={`fw_400 body_1 ${styles.tagline}`}>
+                Work, Stay, Slow Down
+              </p>
+
+              {/* CENTER LOGO */}
+              <Link href="/" className={styles.logo}>
+                <Image
+                  src="/logo/workation-dharamshala-logo-new.svg"
+                  alt="Workation Dharamshala"
+                  width={197}
+                  height={40}
+                  priority
+                />
+              </Link>
+              <div className={styles.whatsapp_btn}>
+                <Button
+                  href="https://wa.me/918219703715"
+                  target="_blank"
+                  variant="primary"
+                  icon={
+                    <Icons
+                      name="whatsappOutline"
+                      color="#fff"
+                      size={20}
+                    />
+                  }
+                  iconPosition="left"
+                >
+                  WhatsApp Us
+                </Button>
+              </div>
+
+              {/* MOBILE MENU BTN */}
+              <button
+                className={styles.menu_btn}
+                onClick={() => setOpen(true)}
+                aria-label="Open Menu"
+              >
+                <span></span>
+                <span></span>
+              </button>
+
+            </div>
+
           </div>
-
-          {/* Desktop Nav */}
-          <nav className={styles.desktopNav}>
-            <a href="/">Home</a>
-            <a href="/workation-packages">Workation</a>
-            <a href="/about">About</a>
-            <a href="/blogs">Blogs</a>
-            <a href="/contact-us">Contact</a>
-          </nav>
-
-          <div className={styles.whatsapp_btn}>
-            <Button
-              href="https://wa.me/+918219703715"
-              variant="primary"
-              target={"_blank"}
-            >
-              WhatsApp Us
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className={styles.menuBtn}
-            onClick={() => setOpen(true)}
-            aria-label="Open Menu"
-          >
-            ☰
-          </button>
         </div>
+
+        {/* BOTTOM NAV */}
+        <div className={styles.bottom_bar}>
+          <div className="container">
+
+            <nav className={styles.desktop_nav}>
+              <Link href="/">Dharamshala</Link>
+              <Link href="/">Experiences</Link>
+              <Link href="/">Guides</Link>
+              <Link href="/">Pricing</Link>
+              <Link href="/">Story</Link>
+              <Link href="/">Contact</Link>
+            </nav>
+
+          </div>
+        </div>
+
       </header>
 
-      {/* Overlay */}
-      {open && (
-        <div
-          className={styles.overlay}
-          onClick={() => setOpen(false)}
-        />
-      )}
+      {/* MOBILE MENU */}
+      <aside className={`${styles.mobile_menu} ${open ? styles.show : ""}`}>
 
-      {/* Slide Menu */}
-      <aside className={`${styles.mobileMenu} ${open ? styles.show : ''}`}>
-        <button
-          className={styles.closeBtn}
-          onClick={() => setOpen(false)}
-          aria-label="Close Menu"
-        >
-          ✕
-        </button>
+        <div className={styles.mobile_menu_top}>
 
-        <nav>
-          <a href="/" onClick={() => setOpen(false)}>Home</a>
-          <a href="/workation-packages" onClick={() => setOpen(false)}>Workation</a>
-          <a href="/about" onClick={() => setOpen(false)}>About</a>
-          <a href="/blogs" onClick={() => setOpen(false)}>Blogs</a>
-          <a href="/contact-us" onClick={() => setOpen(false)}>Contact</a>
+          <Link href="/" className={styles.mobile_logo}>
+            <Image
+              src="/logo/workation-dharamshala-logo-white.svg"
+              alt="Workation Dharamshala"
+              width={177}
+              height={36}
+            />
+          </Link>
+
+          <button
+            className={styles.close_btn}
+            onClick={() => setOpen(false)}
+            aria-label="Close Menu"
+          >
+            ✕
+          </button>
+
+        </div>
+
+        <nav className={styles.mobile_nav}>
+          <Link href="/" onClick={() => setOpen(false)}>
+            Dharamshala
+          </Link>
+
+          <Link href="/" onClick={() => setOpen(false)}>
+            Experiences
+          </Link>
+
+          <Link href="/" onClick={() => setOpen(false)}>
+            Guides
+          </Link>
+
+          <Link href="/" onClick={() => setOpen(false)}>
+            Story
+          </Link>
+
+          <Link href="/" onClick={() => setOpen(false)}>
+            Contact
+          </Link>
         </nav>
 
-        <Button
-          href="https://wa.me/+918219703715"
-          variant="primary"
-          target={"_blank"}
-        >
-          WhatsApp Us
-        </Button>
+        <div className={styles.mobile_bottom}>
+          <h4 className="font_body fw_400 heading_3">
+            Connect
+          </h4>
+
+          <Link href="tel:+918219703715" style={{ marginBottom: '8px' }}>
+            (+91) 82197-03715
+          </Link>
+
+          <Link href="mailto:ishavbhattkhaniyara@gmail.com">
+            ishavbhattkhaniyara@gmail.com
+          </Link>
+
+          <div className={styles.mobile_socials}>
+
+            <Link
+              href="https://www.facebook.com/workationdharamshala/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <Icons
+                name="facebook"
+                size={28}
+                color="#fff"
+              />
+            </Link>
+
+            <Link
+              href="https://www.instagram.com/workationdharamshala/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <Icons
+                name="instagram"
+                size={28}
+                color="#fff"
+              />
+            </Link>
+
+          </div>
+        </div>
       </aside>
     </>
   )
