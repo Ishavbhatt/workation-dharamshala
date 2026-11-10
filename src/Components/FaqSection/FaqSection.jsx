@@ -5,8 +5,13 @@ import { useState } from "react";
 import styles from "./FaqSection.module.scss";
 
 import Icons from "../Icons/Icons";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
-export default function FaqSection({ faqs }) {
+export default function FaqSection({
+    faqs,
+    label = "FAQS",
+    title = "General Asked Questions",
+}) {
 
     const [openIndex, setOpenIndex] = useState(0);
 
@@ -18,23 +23,10 @@ export default function FaqSection({ faqs }) {
         <section className={styles.faq_section}>
             <div className="container">
 
-                <div className={styles.faq_heading}>
-
-                    <div className={styles.sub_heading_wrapper}>
-
-                        <span className={`font_mono fw_500 body_2 ${styles.sub_heading}`}>
-                            FAQS
-                        </span>
-
-                        <span className={styles.line}></span>
-
-                    </div>
-
-                    <h2 className={`font_heading fw_400 title_2 ${styles.faq_title}`}>
-                        General Asked Questions
-                    </h2>
-
-                </div>
+                <SectionHeading
+                    label={label}
+                    title={title}
+                />
 
                 <div className={styles.faq_list}>
 

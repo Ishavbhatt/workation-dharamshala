@@ -9,32 +9,6 @@
     margin: 0 auto;
   }
 
-  .nearby_heading {
-    margin-bottom: 40px;
-
-    .sub_heading_wrapper {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-
-      .sub_heading {
-        color: #666666;
-      }
-
-      .line {
-        width: 58px;
-        height: 1px;
-        background: #cfc7b7;
-      }
-    }
-
-    .nearby_title {
-      max-width: 920px;
-      color: #151515;
-    }
-  }
-
   .slider_wrapper {
     position: relative;
   }
@@ -111,18 +85,6 @@
 
     .nearby_section_container {
       padding-left: 20px;
-    }
-
-    .nearby_heading {
-      margin-bottom: 30px;
-
-      .sub_heading_wrapper {
-        margin-bottom: 14px;
-
-        .line {
-          width: 40px;
-        }
-      }
     }
 
     .place_card {

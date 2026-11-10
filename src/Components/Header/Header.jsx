@@ -1,13 +1,42 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import styles from './Header.module.scss'
 import Button from '../Button/Button'
 import Image from 'next/image'
 import Link from 'next/link'
 import Icons from '../Icons/Icons'
 
+import { NAV_LINKS } from '@/Data/navLinks'
+
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  // Close the mobile menu after navigating, and lock page scroll while it's open.
+  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
+  const isActive = (href) => {
+    if (href.includes('#')) return false
+    return pathname === href || pathname.startsWith(href + '/')
+  }
+
+  const renderLinks = (onClick) =>
+    NAV_LINKS.map((link) => (
+      <Link
+        key={link.href}
+        href={link.href}
+        onClick={onClick}
+        className={isActive(link.href) ? styles.active : undefined}
+        aria-current={isActive(link.href) ? 'page' : undefined}
+      >
+        {link.label}
+      </Link>
+    ))
 
   return (
     <>
@@ -70,13 +99,8 @@ export default function Header() {
         <div className={styles.bottom_bar}>
           <div className="container">
 
-            <nav className={styles.desktop_nav}>
-              <Link href="/">Dharamshala</Link>
-              <Link href="/">Experiences</Link>
-              <Link href="/">Guides</Link>
-              <Link href="/">Pricing</Link>
-              <Link href="/">Story</Link>
-              <Link href="/">Contact</Link>
+            <nav className={styles.desktop_nav} aria-label="Main">
+              {renderLinks()}
             </nav>
 
           </div>
@@ -108,27 +132,29 @@ export default function Header() {
 
         </div>
 
-        <nav className={styles.mobile_nav}>
-          <Link href="/" onClick={() => setOpen(false)}>
-            Dharamshala
-          </Link>
-
-          <Link href="/" onClick={() => setOpen(false)}>
-            Experiences
-          </Link>
-
-          <Link href="/" onClick={() => setOpen(false)}>
-            Guides
-          </Link>
-
-          <Link href="/" onClick={() => setOpen(false)}>
-            Story
-          </Link>
-
-          <Link href="/" onClick={() => setOpen(false)}>
-            Contact
-          </Link>
+        <nav className={styles.mobile_nav} aria-label="Main">
+          {renderLinks(() => setOpen(false))}
         </nav>
+
+        <div className={styles.mobile_ctas}>
+          <Button
+            href="/contact-us"
+            variant="white"
+            icon={<Icons name="arrowTopRight" size={20} />}
+            iconPosition="right"
+          >
+            Plan your stay
+          </Button>
+          <Button
+            href="https://wa.me/918219703715"
+            target="_blank"
+            variant="white_outline"
+            icon={<Icons name="whatsappOutline" size={20} />}
+            iconPosition="left"
+          >
+            WhatsApp us
+          </Button>
+        </div>
 
         <div className={styles.mobile_bottom}>
           <h4 className="font_body fw_400 heading_3">

@@ -1,0 +1,122 @@
+.booking_steps_section {
+    padding: 70px 0;
+    border-bottom: 0.6px solid #151515;
+
+    .booking_steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 46px;
+
+        .booking_step {
+            position: relative;
+            padding-right: 34px;
+
+            .step_number {
+                position: relative;
+                z-index: 2;
+
+                width: 66px;
+                height: 66px;
+
+                border-radius: 50%;
+                border: 1px solid #e4e1db;
+                background: #ffffff;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                margin-bottom: 28px;
+
+                span {
+                    color: #3f7748;
+                }
+            }
+
+            /*
+             * Dotted line connecting the circles
+             */
+            &:not(:last-child) {
+
+                &::after {
+                    content: "";
+
+                    position: absolute;
+
+                    top: 33px;
+                    left: 66px;
+                    right: 0;
+
+                    border-top: 2px dotted #d8bc6c;
+
+                    z-index: 1;
+                }
+            }
+
+            .step_content {
+                max-width: 250px;
+
+                .step_title {
+                    color: #151515;
+                    margin-bottom: 14px;
+                }
+
+                .step_description {
+                    color: #666666;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        padding: 52px 0;
+
+        .booking_steps {
+            grid-template-columns: 1fr;
+
+            margin-top: 32px;
+
+            .booking_step {
+                display: grid;
+                grid-template-columns: 58px 1fr;
+                gap: 18px;
+
+                padding-right: 0;
+                padding-bottom: 34px;
+
+                &:not(:last-child) {
+
+                    &::after {
+                        top: 58px;
+                        left: 29px;
+                        right: auto;
+                        bottom: 0;
+
+                        height: calc(100% - 58px);
+
+                        border-top: none;
+                        border-left: 2px dotted #d8bc6c;
+                    }
+                }
+
+                .step_number {
+                    width: 58px;
+                    height: 58px;
+
+                    margin-bottom: 0;
+                }
+
+                .step_content {
+                    max-width: none;
+
+                    padding-top: 4px;
+
+                    .step_title {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

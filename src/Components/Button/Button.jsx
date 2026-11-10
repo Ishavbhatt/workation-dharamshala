@@ -10,6 +10,8 @@ export default function Button({
   className,
   icon,
   iconPosition = "right",
+  type = "button",
+  disabled = false,
 }) {
   const buttonClass = clsx(
     styles.btn,
@@ -41,7 +43,8 @@ export default function Button({
     return (
       <a
         href={href}
-        target={target || ""}
+        target={target || undefined}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
         className={buttonClass}
       >
         {content}
@@ -51,7 +54,9 @@ export default function Button({
 
   return (
     <button
+      type={type}
       onClick={onClick}
+      disabled={disabled}
       className={buttonClass}
     >
       {content}

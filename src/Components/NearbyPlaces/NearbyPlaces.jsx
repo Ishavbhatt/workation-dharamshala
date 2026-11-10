@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./NearbyPlaces.module.scss";
 import Icons from "../Icons/Icons";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const placesData = [
   {
@@ -14,19 +15,19 @@ const placesData = [
   },
   {
     title: "Bhagsu Falls",
-    image: "/images/dharamshala-view.jpeg",
+    image: "/images/places/bhagsu-waterfall.webp",
   },
   {
     title: "Triund",
-    image: "/images/dharamshala-view.jpeg",
+    image: "/images/tours/triund-trek-dharamshala.webp",
   },
   {
     title: "Dal Lake",
-    image: "/images/dharamshala-view.jpeg",
+    image: "/images/places/dal-lake-dharamshala.webp",
   },
   {
     title: "Naddi View Point",
-    image: "/images/dharamshala-view.jpeg",
+    image: "/images/areas/naddi.webp",
   },
 ];
 
@@ -35,21 +36,10 @@ export default function NearbyPlaces() {
     <section className={styles.nearby_section}>
       <div className={styles.nearby_section_container}>
 
-        <div className={styles.nearby_heading}>
-
-          <div className={styles.sub_heading_wrapper}>
-            <span className={`font_mono fw_500 body_2 ${styles.sub_heading}`}>
-              NEARBY PLACES
-            </span>
-
-            <span className={styles.line}></span>
-          </div>
-
-          <h2 className={`font_heading fw_400 title_2 ${styles.nearby_title}`}>
-            Places to discover around Dharamshala
-          </h2>
-
-        </div>
+        <SectionHeading
+          label="NEARBY PLACES"
+          title="Places to discover around Dharamshala"
+        />
 
         <div className={styles.slider_wrapper}>
 
@@ -99,6 +89,7 @@ export default function NearbyPlaces() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 768px) 80vw, (max-width: 1200px) 45vw, 270px"
                     className={styles.place_image}
                   />
                   <div className={styles.image_overlay}></div>

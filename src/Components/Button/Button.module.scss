@@ -14,6 +14,12 @@
     transition: all 0.35s ease;
     border: 1.6px solid transparent;
 
+    &:disabled {
+        opacity: 0.6;
+        cursor: wait;
+        pointer-events: none;
+    }
+
     .label {
         font-family: var(--font-satoshi);
         transition: all 0.35s ease;

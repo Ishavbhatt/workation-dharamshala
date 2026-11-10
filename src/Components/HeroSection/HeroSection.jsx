@@ -38,6 +38,7 @@ export default function HeroSection() {
             </p>
   
             <Button
+              href="/contact-us"
               variant="primary"
               icon={
                 <Icons
@@ -63,6 +64,7 @@ export default function HeroSection() {
           src="/images/workation-dharamshala.webp"
           alt="Workation Dharamshala"
           fill
+          sizes="(max-width: 768px) 100vw, 52vw"
           priority
           className={styles.hero_image}
         />

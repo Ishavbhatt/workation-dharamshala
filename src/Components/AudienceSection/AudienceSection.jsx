@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import Icons from "../Icons/Icons";
 import styles from "./AudienceSection.module.scss";
 import { useState } from "react";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 export default function AudienceSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,20 +51,10 @@ export default function AudienceSection() {
   return (
     <section className={styles.audience_section}>
       <div className="container">
-        <div className={styles.audience_heading}>
-          <div className={styles.sub_heading_wrapper}>
-            <span className={`font_mono fw_500 body_2 ${styles.sub_heading}`}>
-              WHO SHOULD CONSIDER
-            </span>
-
-            <span className={styles.line}></span>
-          </div>
-
-          <h2 className={`font_heading fw_400 title_2 ${styles.audience_title}`}>
-            Thoughtfully created for
-          </h2>
-        </div>
-
+        <SectionHeading
+          label="WHO SHOULD CONSIDER"
+          title="Thoughtfully created for"
+        />
         <div className={styles.audience_grid}>
 
           {/* LEFT IMAGE */}
@@ -72,6 +63,7 @@ export default function AudienceSection() {
               src="/images/working-remotely.avif"
               alt="Workation Dharamshala"
               fill
+              sizes="(max-width: 768px) 100vw, 550px"
               className={styles.audience_image}
             />
           </div>

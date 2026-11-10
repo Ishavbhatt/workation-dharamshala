@@ -68,8 +68,20 @@
     transition: 0.3s ease;
     color: #151515;
 
+    position: relative;
+
     &:hover {
       opacity: 0.6;
+    }
+
+    &.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 1.5px;
+      background: $primary;
     }
   }
 }
@@ -100,6 +112,7 @@
 }
 
 .mobile_menu {
+  overflow-y: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -145,6 +158,24 @@
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0%;
+
+    &.active {
+      color: #cee4d0;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 1px;
+    }
+  }
+}
+
+.mobile_ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+
+  > * {
+    width: 100%;
   }
 }
 

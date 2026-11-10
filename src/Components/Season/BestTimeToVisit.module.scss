@@ -1,0 +1,210 @@
+@use "../../styles/settings/_settings" as *;
+
+.best_time_section {
+    padding: 60px 0;
+    border-bottom: 0.6px solid #151515;
+
+    .best_time_heading {
+        margin-bottom: 42px;
+
+        .sub_heading_wrapper {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+
+            .sub_heading {
+                color: #666666;
+            }
+
+            .line {
+                width: 58px;
+                height: 1px;
+                background: #cfc7b7;
+            }
+        }
+
+        .best_time_title {
+            color: #171717;
+            margin-bottom: 18px;
+        }
+
+        .best_time_description {
+            max-width: 850px;
+            color: #666666;
+            line-height: 1.7;
+        }
+    }
+
+    .best_time_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    /* ============================= */
+    /* SEASONS */
+    /* ============================= */
+
+    .seasons {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .season_item {
+        border: 1px solid #e3d4a8;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+
+        &.active {
+            background: #f3edd5;
+        }
+
+        .season_header {
+            width: 100%;
+            min-height: 72px;
+
+            padding: 18px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            background: transparent;
+            border: none;
+
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .season_name {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .season_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 28px;
+            min-width: 28px;
+
+            font-size: 28px;
+            line-height: 1;
+            color: #171717;
+        }
+
+        .season_title {
+            color: #171717;
+        }
+
+        .months {
+            color: $primary;
+
+            border: 1px solid $primary;
+            border-radius: 4px;
+
+            padding: 5px 10px;
+
+            white-space: nowrap;
+        }
+
+        .season_description {
+            padding: 0 20px 22px 58px;
+
+            color: #666666;
+            line-height: 1.65;
+
+            p {
+                margin: 0 0 24px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /* ============================= */
+    /* IMAGE */
+    /* ============================= */
+
+    .image_wrapper {
+        position: relative;
+        min-height: 578px;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .image {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* ============================= */
+    /* MOBILE */
+    /* ============================= */
+
+    @media (max-width: 768px) {
+        padding: 48px 0;
+
+        .best_time_heading {
+            margin-bottom: 30px;
+
+            .best_time_title {
+                margin-bottom: 14px;
+            }
+        }
+
+        .best_time_grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .seasons {
+            gap: 12px;
+        }
+
+        .season_item {
+
+            .season_header {
+                min-height: 68px;
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .season_name {
+                gap: 10px;
+            }
+
+            .season_icon {
+                width: 24px;
+                min-width: 24px;
+                font-size: 24px;
+            }
+
+            .season_title {
+                font-size: 20px;
+            }
+
+            .months {
+                font-size: 12px;
+                padding: 4px 7px;
+            }
+
+            .season_description {
+                padding: 0 16px 20px 50px;
+            }
+        }
+
+        .image_wrapper {
+            min-height: 400px;
+        }
+    }
+}

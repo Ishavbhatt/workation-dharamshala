@@ -1,0 +1,40 @@
+@use "../../styles/settings/_settings" as *;
+
+.cta_banner {
+    padding: 32px;
+    border-radius: 4px;
+    background: #cee4d0;
+
+    .heading {
+        margin-bottom: 28px;
+
+        span:first-child,
+        p {
+            color: #151515;
+        }
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+    }
+
+    .whatsapp_link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: $primary;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 28px 16px;
+
+        .heading {
+            margin-bottom: 24px;
+        }
+    }
+}

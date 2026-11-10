@@ -1,0 +1,54 @@
+.guide_card {
+    position: relative;
+    min-height: 360px;
+    padding: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &:hover .guide_image {
+        transform: scale(1.04);
+    }
+}
+
+.guide_image {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image_overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.85) 100%),
+        rgba(155, 111, 51, 0.2);
+}
+
+.guide_date {
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
+
+    padding: 4px 8px;
+    border-radius: 100px;
+    background: #fff;
+    color: #151515;
+
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.08em;
+}
+
+.guide_title {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}

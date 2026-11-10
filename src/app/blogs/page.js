@@ -1,23 +1,26 @@
 import styles from "../../styles/Pages/Blogs.module.scss";
-import blogsData from '@/Data/blogsData.json'
-import BlogCard from "@/Components/Card/BlogCard";
-import PageBanner from "@/Components/Banners/PageBanner";
+import { getBlogs, SITE_URL } from "@/lib/blogs";
+import SectionHeading from "@/Components/SectionHeading/SectionHeading";
+import GuideCard from "@/Components/Card/GuideCard";
+import CtaBanner from "@/Components/CtaBanner/CtaBanner";
+
+const pageTitle = "Workation Guides | Remote Work & Travel Tips for Dharamshala";
+const pageDescription =
+    "Guides for remote workers planning a workation in Dharamshala: costs, best areas, WiFi, co-working, long stays and travel tips for working from the Himalayas.";
 
 export const metadata = {
-    title: "Workation Blog | Travel Tips for Remote Workers & Digital Nomads",
-    description:
-        "Read our workation blog with travel guides, remote work tips, and destination ideas for developers, freelancers, and digital nomads working while traveling.",
+    title: pageTitle,
+    description: pageDescription,
     alternates: {
-        canonical: "https://workationdharamshala.in//blogs",
+        canonical: `${SITE_URL}/blogs`,
     },
     openGraph: {
-        title: "Workation Blog | Travel Tips for Remote Workers & Digital Nomads",
-        description:
-            "Read our workation blog with travel guides, remote work tips, and destination ideas for developers, freelancers, and digital nomads working while traveling.",
-        url: "https://workationdharamshala.in//blogs",
+        title: pageTitle,
+        description: pageDescription,
+        url: `${SITE_URL}/blogs`,
         images: [
             {
-                url: "https://workationdharamshala.in//images/workation-dharamshala.jpg",
+                url: `${SITE_URL}/images/workation-dharamshala.webp`,
                 width: 1200,
                 height: 630,
             },
@@ -25,26 +28,38 @@ export const metadata = {
     },
 };
 
-export default async function BlogsPage() {
+export default function BlogsPage() {
+    const blogs = getBlogs();
 
     return (
         <>
-            <PageBanner imageUrl="/images/blogs/blogs-banner.jpeg" title="Blogs" />
-
-            <section className={`${styles.blogListingSec} common_margin`}>
+            <section className={styles.blog_listing_section}>
                 <div className="container">
-                    <div className={styles.blogListing}>
-                        {blogsData?.length > 0 &&
-                            blogsData.map((blog, index) => (
-                                <BlogCard
-                                    key={blog.id}
-                                    title={blog.title}
-                                    date={blog.date}
-                                    image={blog.featuredImage}
-                                    slug={blog.slug}
-                                />
-                            ))}
+                    <SectionHeading
+                        as="h1"
+                        titleSize="title_1"
+                        label="WORKATION & TRAVEL GUIDES"
+                        title="Co-working, co-living & travel guides"
+                        description="Everything you need to plan a productive, peaceful workation in Dharamshala, from costs and best areas to WiFi, co-working and weekend escapes."
+                    />
+
+                    <div className={styles.blog_grid}>
+                        {blogs.map((blog) => (
+                            <GuideCard
+                                key={blog.slug}
+                                title={blog.title}
+                                slug={blog.slug}
+                                image={blog.featuredImage}
+                                date={blog.date}
+                            />
+                        ))}
                     </div>
+                </div>
+            </section>
+
+            <section className={styles.blog_cta_section}>
+                <div className="container">
+                    <CtaBanner />
                 </div>
             </section>
         </>

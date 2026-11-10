@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import { NAV_LINKS } from "@/Data/navLinks";
 import Link from "next/link";
 
 import styles from "./Footer.module.scss";
@@ -21,12 +22,13 @@ export default function Footer() {
           {/* LEFT */}
           <div className={styles.footer_cta}>
 
-            <h2 className={`font_heading fw_400 title_2 ${styles.footer_title}`}>
+            <p className={`font_heading fw_400 title_2 ${styles.footer_title}`}>
               Ready to switch ? <br />
               work from <span>home</span> himalayas
-            </h2>
+            </p>
 
             <Button
+              href="/contact-us"
               variant="white"
               icon={
                 <Icons
@@ -58,11 +60,9 @@ export default function Footer() {
           {/* CENTER */}
           <div className={styles.footer_links}>
 
-            <Link href="/">Dharamshala</Link>
-            <Link href="/">Experiences</Link>
-            <Link href="/">Guides</Link>
-            <Link href="/">Story</Link>
-            <Link href="/">Contact</Link>
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}>{link.label}</Link>
+            ))}
 
           </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
 
             <div className={styles.social_icons}>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/workationdharamshala/"
                 target="_blank"
               >
                 <Icons
@@ -92,7 +92,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/workationdharamshala/"
                 target="_blank"
               >
                 <Icons
@@ -100,27 +100,6 @@ export default function Footer() {
                   size={26}
                 />
               </a>
-
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-              >
-                <Icons
-                  name="linkedin"
-                  size={26}
-                />
-              </a>
-
-              <a
-                href="https://reddit.com"
-                target="_blank"
-              >
-                <Icons
-                  name="reddit"
-                  size={26}
-                />
-              </a>
-
             </div>
 
           </div>

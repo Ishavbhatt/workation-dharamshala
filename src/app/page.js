@@ -10,19 +10,21 @@ import {
 } from 'react-icons/lu'
 import Image from "next/image";
 import Button from "@/Components/Button/Button";
-import blogsData from '@/Data/blogsData.json'
-import BlogCard from "@/Components/Card/BlogCard";
+import GuidesSection from "@/Components/GuidesSection/GuidesSection";
+import TourCard from "@/Components/Card/TourCard";
+import toursData from "@/Data/toursData";
 import LocalBusinessSchema from "@/Components/Schema/LocalBusinessSchema";
 import FaqSection from "@/Components/FaqSection/FaqSection";
 import Script from "next/script";
 import Icons from "@/Components/Icons/Icons";
 import AudienceSection from "@/Components/AudienceSection/AudienceSection";
 import NearbyPlaces from "@/Components/NearbyPlaces/NearbyPlaces";
+import SectionHeading from "@/Components/SectionHeading/SectionHeading";
 
 export const metadata = {
   title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
   description:
-    "Looking for a workation in Dharamshala? Stay in work-friendly mountain accommodations with fast WiFi, power backup, and peaceful surroundings. Book your remote work stay today.",
+    "Workation in Dharamshala: work-friendly mountain stays with fast WiFi, a work area and peaceful views. 1-week to 1-month packages. Enquire on WhatsApp.",
   alternates: {
     canonical: "https://workationdharamshala.in/",
   },
@@ -32,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: "Workation Dharamshala | Work From the Himalayas with Fast WiFi",
     description:
-      "Looking for a workation in Dharamshala? Stay in work-friendly mountain accommodations with fast WiFi, power backup, and peaceful surroundings. Book your remote work stay today.",
+      "Workation in Dharamshala: work-friendly mountain stays with fast WiFi, a work area and peaceful views. 1-week to 1-month packages. Enquire on WhatsApp.",
     url: "https://workationdharamshala.in",
     images: [
       {
@@ -110,7 +112,7 @@ export default function Home() {
     },
     {
       "question": "What is included in the workation package?",
-      "answer": "Our packages typically include accommodation, 3 meals a day, high-speed WiFi, workspace access, housekeeping, and laundry facilities."
+      "answer": "Every package includes a private room, high-speed WiFi and a work area. Premium stays also include 3 meals a day and power backup. Laundry, airport pickup and weekend tours can be arranged on request, where the property offers them."
     },
     {
       "question": "Can I stay for 2 weeks or longer?",
@@ -175,6 +177,7 @@ export default function Home() {
           </div>
           <div className={styles.editorial_cta}>
             <Button
+              href="/dharamshala"
               variant="black"
               icon={
                 <Icons
@@ -196,21 +199,10 @@ export default function Home() {
       <section className={styles.features_section}>
         <div className="container">
 
-          <div className={styles.features_heading}>
-
-            <div className={styles.sub_heading_wrapper}>
-              <span className={`font_mono fw_500 body_2 ${styles.sub_heading}`}>
-                WHY CHOOSE US
-              </span>
-
-              <span className={styles.line}></span>
-            </div>
-
-            <h2 className={`font_heading fw_400 title_2 ${styles.features_title}`}>
-              We Care all that you need
-            </h2>
-
-          </div>
+          <SectionHeading
+            label="WHY CHOOSE US"
+            title="We Care all that you need"
+          />
 
           <div className={styles.features_grid}>
 
@@ -226,9 +218,9 @@ export default function Home() {
                   "Uninterrupted work even during occasional power cuts.",
               },
               {
-                title: "Dedicated work space",
+                title: "Quiet work space",
                 description:
-                  "Quiet spaces with proper desks designed for focus.",
+                  "Quiet work areas designed for focus.",
               },
               {
                 title: "Rooms with views",
@@ -277,103 +269,33 @@ export default function Home() {
       <section className={styles.experiences_section}>
         <div className="container">
 
-          <div className={styles.experiences_heading}>
-
-            <div className={styles.sub_heading_wrapper}>
-              <span className={`font_mono fw_500 body_2 ${styles.sub_heading}`}>
-                WEEKEND EXPERIENCES
-              </span>
-
-              <span className={styles.line}></span>
-            </div>
-
-            <h2 className={`font_heading fw_400 title_2 ${styles.experiences_title}`}>
-              Recharge yourself on weekends
-            </h2>
-
-          </div>
+          <SectionHeading
+            label="WEEKEND EXPERIENCES"
+            title="Recharge yourself on weekends"
+          />
 
           <div className={styles.experiences_grid}>
-
-            {[
-              {
-                title: "Triund Trek",
-                image: "/images/mountain-view.webp",
-              },
-              {
-                title: "Paragliding",
-                image: "/images/mountain-view.webp",
-              },
-              {
-                title: "Day Tour 01",
-                image: "/images/mountain-view.webp",
-              },
-              {
-                title: "Day Tour 02",
-                image: "/images/mountain-view.webp",
-              },
-            ].map((item, index) => (
-              <div className={styles.experience_card} key={index}>
-
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className={styles.experience_image}
-                />
-
-                <div className={styles.image_overlay}></div>
-
-                <div className={styles.experience_content}>
-
-                  <div className={styles.experience_info}>
-                    <h3 className={`font_heading fw_400 heading_3 ${styles.experience_title}`}>
-                      {item.title}
-                    </h3>
-                    <span className={`font_mono fw_500 body_2 ${styles.experience_tag}`}>
-                      ADVENTURE, THRILL, VIEWS
-                    </span>
-                  </div>
-
-                  <Button
-                    variant="white_outline"
-                    icon={
-                      <Icons
-                        name="arrowTopRight"
-                        size={20}
-                      />
-                    }
-                    iconPosition="right"
-                  >
-                    Discover
-                  </Button>
-                </div>
-              </div>
+            {toursData.map((tour) => (
+              <TourCard key={tour.slug} tour={tour} />
             ))}
+          </div>
+
+          <div className={styles.experiences_cta}>
+            <Button
+              href="/tours"
+              variant="black"
+              icon={<Icons name="arrowTopRight" size={20} />}
+              iconPosition="right"
+            >
+              See all tours & activities
+            </Button>
           </div>
         </div>
       </section>
 
       <NearbyPlaces />
 
-      {/* <section className={`${styles.blogs_sec} common_margin`}>
-        <div className="container">
-          <span>Travel & Workation Insights</span>
-          <h2>Workation Tips, Remote Work & Travel Guides</h2>
-
-          <div className={styles.blogs_lisitng}>
-            {blogsData?.map((blog) => (
-              <BlogCard
-                key={blog.id}
-                title={blog.title}
-                date={blog.date}
-                image={blog.featuredImage}
-                slug={blog.slug}
-              />
-            ))}
-          </div>
-        </div>
-      </section> */}
+      <GuidesSection />
 
       <FaqSection faqs={faqsData} />
 

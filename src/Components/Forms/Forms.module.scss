@@ -1,44 +1,46 @@
 @use "../../styles/settings/_settings" as *;
 
+/* Form layout. Input styling lives in FormField.module.scss */
+
 .form {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 20px;
 
     .row {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        gap: 20px;
     }
 
-    .field {
+    .honeypot {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .error {
+        color: #d93025;
+        line-height: 1.5;
+    }
+
+    .actions {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+        margin-top: 8px;
     }
 
-    .field label {
-        font-size: 0.85rem;
-        margin-bottom: 10px;
-        color: #2b2622;
-    }
-
-    .field input,
-    .field textarea {
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-        padding: 10px 0;
-        font-size: 0.95rem;
-        color: #2b2622;
-        outline: none;
-
-        &::placeholder {
-            color: #9b948a;
-        }
-    }
-
-    .field textarea {
-        resize: none;
+    .whatsapp_link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: $primary;
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
 
     @media (max-width: 768px) {
@@ -48,5 +50,57 @@
             grid-template-columns: 1fr;
             gap: 16px;
         }
+
+        .actions {
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+        }
+
+        .actions > * {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+    color: #151515;
+
+    p {
+        color: #666666;
+        line-height: 1.6;
+    }
+
+    .success_icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #cee4d0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .success_actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        margin-top: 8px;
+    }
+
+    .text_btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #151515;
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
 }

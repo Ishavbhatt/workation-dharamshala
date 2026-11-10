@@ -1,0 +1,49 @@
+.guides_section {
+    padding: 68px 0;
+    border-bottom: 0.6px solid #151515;
+
+    .guides_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .guides_cta {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 992px) {
+        .guides_grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 48px 0;
+
+        .guides_grid {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            margin-right: -20px;
+            padding-right: 20px;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .guide_card {
+            flex: 0 0 78%;
+            scroll-snap-align: start;
+        }
+
+        .guides_cta {
+            margin-top: 28px;
+        }
+    }
+}

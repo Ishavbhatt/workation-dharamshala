@@ -1,0 +1,45 @@
+.section_heading {
+    margin-bottom: 42px;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .sub_heading_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        .sub_heading {
+            color: #666666;
+        }
+
+        .line {
+            width: 58px;
+            height: 1px;
+
+            background: #cfc7b7;
+        }
+    }
+
+    .title {
+        color: #151515;
+    }
+
+    .description {
+        color: #666666;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 32px;
+
+        .sub_heading_wrapper {
+            margin-bottom: 14px;
+
+            .line {
+                width: 40px;
+            }
+        }
+    }
+}
