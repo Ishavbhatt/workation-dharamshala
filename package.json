@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "images": "node scripts/optimize-images.mjs"
+    "start": "next start"
   },
   "dependencies": {
     "clsx": "^2.1.1",

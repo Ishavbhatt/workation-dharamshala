@@ -11,7 +11,7 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 const placesData = [
   {
     title: "Tea Garden",
-    image: "/images/dharamshala-view.jpeg",
+    image: "/images/places/tea-garden-dharamshala.webp",
   },
   {
     title: "Bhagsu Falls",

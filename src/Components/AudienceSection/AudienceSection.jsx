@@ -14,9 +14,9 @@ export default function AudienceSection() {
     {
       title: "IT professionals",
       description1:
-        "Lorem ipsum dolor sit amet consectetur. Diam enim pellentesque a a nam eu. Lectus placerat vitae amet nisi mi aliquet lectus.",
+        "High-speed Wi-Fi and quiet work areas for video calls, stand-ups and long, focused coding sessions.",
       description2:
-        "Ut bibendum malesuada aliquet sem turpis nisl tristique imperdiet. Pharetra aliquam vestibulum mi feugiat non felis.",
+        "Swap the commute for mountain views and end your workday with a walk through the pine forests.",
     },
     {
       title: "Remote employees",

@@ -162,31 +162,37 @@ export default function Dharamshala() {
           <div className={styles.features_grid}>
             {[
               {
+                icon: "featureWifi",
                 title: "Fast, reliable Wi-Fi",
                 description:
                   "High-speed Wi-Fi at every stay we recommend, checked by us first, so video calls and uploads run smoothly.",
               },
               {
+                icon: "featurePower",
                 title: "Power backup",
                 description:
                   "Our premium stays have power backup, so short power cuts in the hills don't interrupt your workday.",
               },
               {
+                icon: "featureMountain",
                 title: "Mountain views",
                 description:
                   "Wake up to the snow line of the Dhauladhars and step out into fresh mountain air between meetings.",
               },
               {
+                icon: "featureCafe",
                 title: "Café culture",
                 description:
                   "McLeodganj, Bhagsu and Dharamkot are full of laptop-friendly cafés for a change of scene.",
               },
               {
+                icon: "featureClimate",
                 title: "Cool climate",
                 description:
                   "Pleasant summers and crisp winters make it easy to stay focused, far from the city heat.",
               },
               {
+                icon: "featureSupport",
                 title: "Local trust & support",
                 description:
                   "We live in Dharamshala and are a WhatsApp message away for pickups, plans and anything you need.",
@@ -195,8 +201,9 @@ export default function Dharamshala() {
               <div key={index} className={styles.feature_card}>
 
                 <Icons
-                  name="wifi"
-                  size={48}
+                  name={item.icon}
+                  size={44}
+                  strokeWidth={1.6}
                   color="#3D7745"
                 />
 

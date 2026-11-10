@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/api/",
+      disallow: ["/api/", "/sales/"],
     },
     sitemap: "https://workationdharamshala.in/sitemap.xml",
   };

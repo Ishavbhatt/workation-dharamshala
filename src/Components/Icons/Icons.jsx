@@ -1,3 +1,5 @@
+import { LuWifi, LuPlugZap, LuMountainSnow, LuCoffee, LuThermometerSnowflake, LuHandshake } from "react-icons/lu";
+
 export default function Icons({
     name,
     color = "currentColor",
@@ -5,7 +7,15 @@ export default function Icons({
     strokeWidth = 2,
     className = "",
 }) {
+    // Outline icons for feature cards (same style, different meaning)
+    const lucide = { size, color, strokeWidth };
     const icons = {
+        featureWifi: <LuWifi {...lucide} />,
+        featurePower: <LuPlugZap {...lucide} />,
+        featureMountain: <LuMountainSnow {...lucide} />,
+        featureCafe: <LuCoffee {...lucide} />,
+        featureClimate: <LuThermometerSnowflake {...lucide} />,
+        featureSupport: <LuHandshake {...lucide} />,
         whatsappOutline: (
             <svg xmlns="http://www.w3.org/2000/svg"
                 width={size}

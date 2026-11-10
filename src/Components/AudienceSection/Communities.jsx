@@ -14,37 +14,37 @@ export default function Communities() {
     {
       title: "Startup founders & teams",
       description1:
-        "Lorem ipsum dolor sit amet consectetur. Diam enim pellentesque a a nam eu. Lectus placerat vitae amet nisi mi aliquet lectus.",
+        "Founders and small teams come to Dharamshala for focused sprints and offsites, far from the noise of the city.",
       description2:
-        "Ut bibendum malesuada aliquet sem turpis nisl tristique imperdiet. Pharetra aliquam vestibulum mi feugiat non felis.",
+        "Plan the next quarter in the mornings, then clear your head on a trek or a sunset at Naddi.",
     },
     {
-      title: "Remote employees",
+      title: "IT professionals",
       description1:
-        "Reliable WiFi, peaceful stays, and focused environments for remote employees seeking balance.",
+        "Developers and engineers work from Dharamshala's cafés and long stays, with high-speed Wi-Fi for calls and deployments.",
       description2:
-        "Designed for professionals who want productivity without city chaos.",
+        "A calm workday in the mountains, with evenings free for café hopping and fresh air.",
     },
     {
       title: "Freelancers",
       description1:
-        "Flexible long stays for creators, designers, developers, and independent professionals.",
+        "Flexible long stays for creators, developers, consultants and independent professionals.",
       description2:
-        "Work peacefully while staying connected with nature and community.",
+        "Work at your own pace while staying connected with nature and like-minded people.",
     },
     {
-      title: "Startup founders & teams",
+      title: "Designers & writers",
       description1:
-        "Ideal for founders looking for strategic retreats, deep work, and creative clarity.",
+        "The calm, the views and the slower pace make Dharamshala a favourite with designers, writers and other creatives.",
       description2:
-        "Perfect for small teams seeking focus away from fast-paced city life.",
+        "Find inspiration on a forest walk, then settle in at a café table with your laptop.",
     },
     {
       title: "Digital nomads",
       description1:
-        "Curated stays built for slow travel and productive remote lifestyles.",
+        "Dharamshala, McLeodganj and Dharamkot have a growing community of remote workers from India and around the world.",
       description2:
-        "Experience Dharamshala while maintaining your daily workflow.",
+        "Experience the Himalayas while keeping your daily workflow.",
     },
   ];
 
@@ -54,7 +54,7 @@ export default function Communities() {
         <SectionHeading
           label="DHARAMSHALA COMMUNITIES"
           title="Work alongside like-minded people"
-          description="From cafés and co-working spaces to weekend meetups, experience a community designed around work, creativity, and connection."
+          description="Dharamshala's cafés and co-working spaces attract remote workers, creators and founders, so you're never the only one with a laptop."
         />
         <div className={styles.audience_grid}>
 
