@@ -32,7 +32,7 @@ export default function Button({
       </span>
 
       {icon && iconPosition === "right" && (
-        <span className={styles.icon}>
+        <span className={`${styles.icon} ${styles.icon_right}`}>
           {icon}
         </span>
       )}

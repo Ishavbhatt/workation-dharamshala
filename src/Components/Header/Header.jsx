@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Icons from '../Icons/Icons'
 
 import { NAV_LINKS } from '@/Data/navLinks'
+import { stopScroll, startScroll } from '../SmoothScroll/SmoothScroll'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -17,7 +18,8 @@ export default function Header() {
   useEffect(() => { setOpen(false) }, [pathname])
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    if (open) stopScroll(); else startScroll()
+    return () => { document.body.style.overflow = ''; startScroll() }
   }, [open])
 
   const isActive = (href) => {

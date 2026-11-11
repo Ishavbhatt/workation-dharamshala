@@ -1,5 +1,6 @@
 
 "use client";
+import Collapse, { ToggleIcon } from "../Collapse/Collapse";
 import Image from "next/image";
 import Button from "../Button/Button";
 import Icons from "../Icons/Icons";
@@ -82,32 +83,29 @@ export default function Communities() {
                     onClick={() =>
                       setActiveIndex(isActive ? null : index)
                     }
+                    aria-expanded={isActive}
                   >
 
                     <span className={`font_body fw_400 heading_3`}>
                       {item.title}
                     </span>
 
-                    <Icons
-                      name={isActive ? "close" : "plus"}
-                      size={24}
-                    />
+                    <ToggleIcon open={isActive}>
+                      <Icons name="plus" size={24} />
+                    </ToggleIcon>
 
                   </button>
 
-                  {isActive && (
+                  <Collapse open={isActive}>
                     <div className={styles.audience_body}>
-
                       <p className={`font_body fw_400 heading_5`}>
                         {item.description1}
                       </p>
-
                       <p className={`font_body fw_400 heading_5`}>
                         {item.description2}
                       </p>
-
                     </div>
-                  )}
+                  </Collapse>
 
                 </div>
               );

@@ -715,3 +715,37 @@
         }
     }
 }
+/* Banner entrance animation */
+@keyframes bannerFadeUp {
+    from { opacity: 0; transform: translate3d(0, 24px, 0); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes bannerSettle {
+    from { transform: scale(1.08); }
+    to { transform: scale(1); }
+}
+
+.dharamshala_intro_section {
+    .intro_banner {
+        overflow: hidden;
+
+        .banner_image {
+            animation: bannerSettle 2s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .banner_content > * {
+            animation: bannerFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+            &:nth-child(2) { animation-delay: 0.12s; }
+            &:nth-child(3) { animation-delay: 0.24s; }
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .intro_banner .banner_image,
+        .intro_banner .banner_content > * {
+            animation: none;
+        }
+    }
+}

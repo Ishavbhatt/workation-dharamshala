@@ -1,0 +1,43 @@
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+.collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+        grid-template-rows 0.55s $ease,
+        opacity 0.35s ease;
+}
+
+.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transition:
+        grid-template-rows 0.55s $ease,
+        opacity 0.45s ease 0.1s;
+}
+
+.inner {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.45s $ease;
+}
+
+.toggle_open {
+    transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collapse,
+    .open,
+    .toggle {
+        transition: none;
+    }
+}

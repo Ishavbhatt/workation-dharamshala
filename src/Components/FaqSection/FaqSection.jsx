@@ -1,5 +1,6 @@
 "use client";
 
+import Collapse, { ToggleIcon } from "../Collapse/Collapse";
 import { useState } from "react";
 
 import styles from "./FaqSection.module.scss";
@@ -43,6 +44,8 @@ export default function FaqSection({
                                 <button
                                     className={styles.faq_question}
                                     onClick={() => toggleFAQ(index)}
+                                    aria-expanded={isActive}
+                                    aria-controls={`faq-answer-${index}`}
                                 >
 
                                     <span className={`font_body fw_400 heading_3 ${styles.question_text}`}>
@@ -50,23 +53,20 @@ export default function FaqSection({
                                     </span>
 
                                     <span className={styles.icon}>
-                                        <Icons
-                                            name={isActive ? "close" : "plus"}
-                                            size={22}
-                                        />
+                                        <ToggleIcon open={isActive}>
+                                            <Icons name="plus" size={22} />
+                                        </ToggleIcon>
                                     </span>
 
                                 </button>
 
-                                {isActive && (
+                                <Collapse open={isActive} id={`faq-answer-${index}`}>
                                     <div className={styles.faq_answer}>
-
                                         <p className={`font_body fw_400 heading_5`}>
                                             {faq.answer}
                                         </p>
-
                                     </div>
-                                )}
+                                </Collapse>
 
                             </div>
                         );

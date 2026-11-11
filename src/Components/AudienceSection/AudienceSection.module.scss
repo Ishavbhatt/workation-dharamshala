@@ -58,6 +58,11 @@
 
     span {
       color: #888888;
+      transition: color 0.35s ease;
+    }
+
+    &:hover span {
+      color: #151515;
     }
   }
 

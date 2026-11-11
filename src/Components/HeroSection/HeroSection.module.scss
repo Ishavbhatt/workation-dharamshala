@@ -120,3 +120,38 @@
         min-height: 293px;
     }
 }
+/* ========================================= */
+/* ENTRANCE ANIMATION */
+/* ========================================= */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes heroSettle {
+  from { opacity: 0; transform: scale(1.08); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero_content_inner > * {
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  &:nth-child(2) { animation-delay: 0.12s; }
+  &:nth-child(3) { animation-delay: 0.24s; }
+  &:nth-child(4) { animation-delay: 0.36s; }
+}
+
+.hero_image_wrapper {
+  overflow: hidden;
+}
+
+.hero_image {
+  animation: heroSettle 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero_content_inner > *,
+  .hero_image {
+    animation: none;
+  }
+}

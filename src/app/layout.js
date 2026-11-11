@@ -1,6 +1,8 @@
 import Header from "@/Components/Header/Header";
 import "../styles/globals.scss";
 import Footer from "@/Components/Footer/Footer";
+import SmoothScroll from "@/Components/SmoothScroll/SmoothScroll";
+import ScrollReveal from "@/Components/SmoothScroll/ScrollReveal";
 import localFont from "next/font/local";
 import { DM_Mono } from "next/font/google";
 
@@ -74,6 +76,8 @@ export default function RootLayout({ children }) {
     ${satoshi.variable}
     ${dmMono.variable}
   `}>
+        <SmoothScroll />
+        <ScrollReveal />
         <Header />
         {children}
         <Footer />
