@@ -81,7 +81,7 @@ const schema = {
     "@type": "TravelAgency",
     name: "Workation Dharamshala",
     url: SITE_URL,
-    email: "ishavbhattkhaniyara@gmail.com",
+    email: "hello@workationdharamshala.in",
     telephone: "+91-8219703715",
     areaServed: { "@type": "City", name: "Dharamshala" },
     address: {

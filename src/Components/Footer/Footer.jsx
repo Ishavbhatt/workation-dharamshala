@@ -76,8 +76,8 @@ export default function Footer() {
               (+91) 82197-03715
             </a>
 
-            <a href="mailto:ishavbhattkhaniyara@gmail.com">
-              ishavbhattkhaniyara@gmail.com
+            <a href="mailto:hello@workationdharamshala.in">
+              hello@workationdharamshala.in
             </a>
 
             <div className={styles.social_icons}>

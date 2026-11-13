@@ -179,7 +179,7 @@ const sections = [
           <li>We never sell your information or use it for unrelated marketing.</li>
           <li>
             You can ask us to see, correct or delete your information at any time by emailing{" "}
-            <a href="mailto:ishavbhattkhaniyara@gmail.com">ishavbhattkhaniyara@gmail.com</a>.
+            <a href="mailto:hello@workationdharamshala.in">hello@workationdharamshala.in</a>.
           </li>
         </ul>
       </>

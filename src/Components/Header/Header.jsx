@@ -167,8 +167,8 @@ export default function Header() {
             (+91) 82197-03715
           </Link>
 
-          <Link href="mailto:ishavbhattkhaniyara@gmail.com">
-            ishavbhattkhaniyara@gmail.com
+          <Link href="mailto:hello@workationdharamshala.in">
+            hello@workationdharamshala.in
           </Link>
 
           <div className={styles.mobile_socials}>

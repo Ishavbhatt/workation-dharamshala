@@ -41,8 +41,8 @@ const contactItems = [
   {
     icon: <Icons name="mail" size={22} strokeWidth={1.6} />,
     label: "Email",
-    value: "ishavbhattkhaniyara@gmail.com",
-    href: "mailto:ishavbhattkhaniyara@gmail.com",
+    value: "hello@workationdharamshala.in",
+    href: "mailto:hello@workationdharamshala.in",
   },
   {
     icon: <Icons name="mapPin" size={22} strokeWidth={1.6} />,
